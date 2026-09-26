@@ -23,6 +23,6 @@ public class PlayerController : MonoBehaviour
 
    private void FixedUpdate()
    {
-      _rb.linearVelocityY = _rb.linearVelocity.y;
+      _rb.linearVelocityX = _input.horizontal * moveSpeed;
    }
 }
