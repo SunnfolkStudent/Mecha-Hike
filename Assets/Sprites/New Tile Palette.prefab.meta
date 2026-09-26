@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Assets/Sprites/New Tile Palette.prefab.meta
 guid: c24c88ab3926c4c7db3460039b7b40b4
 PrefabImporter:
+========
+guid: 41b4abf28214a4a44b1a5e7f77e4437d
+folderAsset: yes
+DefaultImporter:
+>>>>>>>> f4c29e21369b6ec8b91d69e39406144ef4ad8c6f:Assets/Scripts.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
