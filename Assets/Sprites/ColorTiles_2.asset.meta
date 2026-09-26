@@ -1,13 +1,8 @@
 fileFormatVersion: 2
-<<<<<<<< HEAD:Assets/Sprites/ColorTiles_2.asset.meta
 guid: ac5fb29377672ae43bdfe11ee96e542a
 NativeFormatImporter:
-========
-guid: b1762c1e33a1da94890f30a63a0ae300
-folderAsset: yes
-DefaultImporter:
->>>>>>>> f4c29e21369b6ec8b91d69e39406144ef4ad8c6f:Assets/Tiles.meta
   externalObjects: {}
+  mainObjectFileID: 11400000
   userData: 
   assetBundleName: 
   assetBundleVariant: 
