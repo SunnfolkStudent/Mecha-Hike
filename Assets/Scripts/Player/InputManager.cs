@@ -7,15 +7,11 @@ public class InputManager : MonoBehaviour
     
     public float horizontal;
     public bool jump;
-    public bool attack;
-    public bool interact;
 
     private void Update()
     {
         horizontal = _inputSystem.Player.Move.ReadValue<Vector2>().x;
         jump = _inputSystem.Player.Jump.WasPressedThisFrame();
-        attack = _inputSystem.Player.Attack.WasPressedThisFrame();
-        interact = _inputSystem.Player.Interact.WasPressedThisFrame();
     }
 
     private void Awake()

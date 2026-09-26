@@ -2,10 +2,16 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-   private InputManager _input;
-   private Rigidbody2D _rb;
    public float moveSpeed = 5f;
    public float jumpSpeed = 3f;
+
+   public bool isGrounded;
+   public Transform groundCheck;
+   public LayerMask whatIsGround;
+   public Vector2 groundBoxSize =  new Vector2(0.8f, 0.2f);
+   
+   private InputManager _input;
+   private Rigidbody2D _rb;
 
    private void Start()
    {
@@ -15,7 +21,8 @@ public class PlayerController : MonoBehaviour
 
    private void Update()
    {
-      if (_input.jump)
+      isGrounded = Physics2D.OverlapBox(groundCheck.position, groundBoxSize, 0f, whatIsGround);
+      if (isGrounded && _input.jump)
       {
          _rb.linearVelocityY = jumpSpeed;
       }
