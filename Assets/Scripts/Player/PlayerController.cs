@@ -5,13 +5,14 @@ public class PlayerController : MonoBehaviour
 {
    public float moveSpeed = 5f;
    public float jumpSpeed = 6f;
-   public float jetForce = 2f;
+   public float jetForce = 20f;
 
    public bool isGrounded;
    public Transform groundCheck;
    public LayerMask whatIsGround;
    public Vector2 groundBoxSize =  new Vector2(0.8f, 0.2f);
    public float jumpTimer = 1f;
+   public float jetTimer = 1f;
    
    private InputManager _input;
    private Rigidbody2D _rb;
@@ -27,11 +28,17 @@ public class PlayerController : MonoBehaviour
       isGrounded = Physics2D.OverlapBox(groundCheck.position, groundBoxSize, 0f, whatIsGround);
       if (_input.jumpHeld && jumpTimer > 0)
       {
-         _rb.linearVelocityY = jetForce;
          _rb.gravityScale = 0;
+         _rb.linearVelocityY = jetForce;
          //instantiate jetThruster (damage enemies)
          //animation jet
+         jetTimer -= Time.deltaTime;
       }
+      /*else if (jetTimer <= 0)
+      {
+         _rb.gravityScale = 1;
+         _rb.linearVelocityY = 0;
+      }*/
       else if (isGrounded && _input.jumpPressed)
       {
          _rb.linearVelocityY = jumpSpeed;
@@ -39,17 +46,14 @@ public class PlayerController : MonoBehaviour
       }
       else
       {
-         _rb.gravityScale = 1;
+         _rb.gravityScale = 2;
       }
       
    }
 
    private void FixedUpdate()
    {
-      if (isGrounded)
-      {
          _rb.linearVelocityX = _input.horizontal * moveSpeed;
-      }
    }
 
    private void OnDrawGizmos()
