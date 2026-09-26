@@ -4,15 +4,21 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
    public float moveSpeed = 5f;
-   public float jumpSpeed = 6f;
-   public float jetForce = 20f;
+   public float jumpSpeed = 3f;
+   public float jetForce = 2f;
 
    public bool isGrounded;
    public Transform groundCheck;
    public LayerMask whatIsGround;
    public Vector2 groundBoxSize =  new Vector2(0.8f, 0.2f);
-   public float jumpTimer = 1f;
-   public float jetTimer = 1f;
+   public float jumpTimer;
+   public float jetTimer;
+   public float jetCoolDown;
+
+   public Transform thrusters;
+   public Transform heightLimitTransform;
+   public float heightLimit;
+  // public LayerMask whatIsEnemy;
    
    private InputManager _input;
    private Rigidbody2D _rb;
@@ -25,30 +31,52 @@ public class PlayerController : MonoBehaviour
 
    private void Update()
    {
+      jumpTimer -= Time.deltaTime;
+      jetCoolDown -= Time.deltaTime;
+      
       isGrounded = Physics2D.OverlapBox(groundCheck.position, groundBoxSize, 0f, whatIsGround);
-      if (_input.jumpHeld && jumpTimer > 0)
-      {
+      if (_input.jumpHeld && jumpTimer <= 0 && jetCoolDown <= 0)
+      { 
+         thrusters.gameObject.SetActive(true);
+        //animation thrusters
          _rb.gravityScale = 0;
          _rb.linearVelocityY = jetForce;
-         //instantiate jetThruster (damage enemies)
-         //animation jet
-         jetTimer -= Time.deltaTime;
+         jetTimer += Time.deltaTime;
+         if (_rb.transform.position.y >= heightLimit)
+         {
+            _rb.linearVelocityY = 0;
+         }
       }
-      /*else if (jetTimer <= 0)
+      else
       {
-         _rb.gravityScale = 1;
-         _rb.linearVelocityY = 0;
-      }*/
-      else if (isGrounded && _input.jumpPressed)
+         thrusters.gameObject.SetActive(false);
+      }
+      if (isGrounded && _input.jumpPressed)
       {
+         heightLimit = heightLimitTransform.localPosition.y;
          _rb.linearVelocityY = jumpSpeed;
-         jumpTimer -= Time.deltaTime;
+         jumpTimer = 0.3f;
       }
       else
       {
          _rb.gravityScale = 2;
       }
       
+      if (jetTimer > 3)
+      {
+         _rb.linearVelocityY = 0;
+         jetTimer = 0;
+         jetCoolDown = 4f;
+      }
+      
+   }
+
+   private void OnTriggerEnter2D(Collider2D other)
+   {
+      if (other.gameObject.CompareTag("Enemy"))
+      {
+         other.gameObject.SetActive(false);
+      }
    }
 
    private void FixedUpdate()
