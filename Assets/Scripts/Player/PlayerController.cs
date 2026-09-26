@@ -42,10 +42,10 @@ public class PlayerController : MonoBehaviour
          _rb.gravityScale = 0;
          _rb.linearVelocityY = jetForce;
          jetTimer += Time.deltaTime;
-         if (_rb.transform.position.y >= heightLimit)
+        /* if (_rb.transform.position.y >= heightLimit)
          {
             _rb.linearVelocityY = 0;
-         }
+         }*/
       }
       else
       {
@@ -53,7 +53,7 @@ public class PlayerController : MonoBehaviour
       }
       if (isGrounded && _input.jumpPressed)
       {
-         heightLimit = heightLimitTransform.localPosition.y;
+         //heightLimit = heightLimitTransform.localPosition.y;
          _rb.linearVelocityY = jumpSpeed;
          jumpTimer = 0.3f;
       }
