@@ -1,11 +1,16 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
    public float moveSpeed = 5f;
    public float jumpSpeed = 3f;
    public float jetForce = 2f;
+   
+   public float playerHealth = 10;
+   private float _damageCooldownTimer;
+   private float _damageCooldown = 1;
 
    public bool isGrounded;
    public Transform groundCheck;
@@ -70,6 +75,11 @@ public class PlayerController : MonoBehaviour
       }
       
    }
+   
+   private void FixedUpdate()
+   {
+      _rb.linearVelocityX = _input.horizontal * moveSpeed;
+   }
 
    private void OnTriggerEnter2D(Collider2D other)
    {
@@ -78,10 +88,33 @@ public class PlayerController : MonoBehaviour
          other.gameObject.SetActive(false);
       }
    }
-
-   private void FixedUpdate()
+   
+   private void OnCollisionStay2D(Collision2D other)
    {
-         _rb.linearVelocityX = _input.horizontal * moveSpeed;
+      if (other.gameObject.CompareTag("Bugger"))
+      {
+         TakeDamage();
+      }
+   }
+
+   private void RestartScene()
+   {
+      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+   }
+
+   private void TakeDamage()
+   {
+      if (Time.time > _damageCooldownTimer)
+      {
+         playerHealth -= 1;
+         _damageCooldownTimer = Time.time + _damageCooldown;
+         //add hurt sound and animation
+      }
+
+      if (playerHealth == 0)
+      {
+         RestartScene();
+      }
    }
 
    private void OnDrawGizmos()
