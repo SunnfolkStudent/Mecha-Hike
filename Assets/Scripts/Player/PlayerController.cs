@@ -16,6 +16,7 @@ public class PlayerController : MonoBehaviour
    public Transform groundCheck;
    public LayerMask whatIsGround;
    public Vector2 groundBoxSize =  new Vector2(0.8f, 0.2f);
+   
    public float jumpTimer;
    public float jetTimer;
    public float jetCoolDown;
@@ -83,7 +84,7 @@ public class PlayerController : MonoBehaviour
 
    private void OnTriggerEnter2D(Collider2D other)
    {
-      if (other.gameObject.CompareTag("Enemy"))
+      if (other.gameObject.layer == 7)
       {
          other.gameObject.SetActive(false);
       }
