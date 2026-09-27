@@ -17,14 +17,23 @@ public class PlayerController : MonoBehaviour
    public LayerMask whatIsGround;
    public Vector2 groundBoxSize =  new Vector2(0.8f, 0.2f);
    
+   public Transform wallCheck;
+   public LayerMask whatIsWall;
+   public Vector2 wallCheckSize = new Vector2(0.8f, 0.2f);
+   
    public float jumpTimer;
    public float jetTimer;
    public float jetCoolDown;
 
    public Transform thrusters;
    public Transform heightLimitTransform;
-   public float heightLimit;
-  // public LayerMask whatIsEnemy;
+   public float heightLimit; 
+   //public LayerMask whatIsEnemy;
+   
+   public bool isWallSliding;
+   public bool isFacingRight;
+   public float wallSlideSpeed = 2f;
+   private float _directionFacing;
    
    private InputManager _input;
    private Rigidbody2D _rb;
@@ -37,6 +46,10 @@ public class PlayerController : MonoBehaviour
 
    private void Update()
    {
+      
+      ProcessWallSlide();
+      Flip();
+      
       jumpTimer -= Time.deltaTime;
       jetCoolDown -= Time.deltaTime;
       
@@ -118,9 +131,50 @@ public class PlayerController : MonoBehaviour
       }
    }
 
+   private bool WallChecking()
+   {
+      return Physics2D.OverlapCircle(wallCheck.position, 0.2f, whatIsWall);
+   }
+   private void Flip()
+   {
+      if (!isWallSliding)
+      {
+         if (_input.horizontal > 0)
+         {
+            _directionFacing = 2;
+         }
+         else if (_input.horizontal < 0)
+         {
+            _directionFacing = -2;
+         }
+         
+         isFacingRight = _input.horizontal < 0;
+
+         if (_input.horizontal != 0 && transform.localScale.x != _directionFacing)
+         {
+            transform.localScale = new Vector3(_directionFacing, transform.localScale.y, transform.localScale.z);
+         }
+
+      }
+   }
+   
+   private void ProcessWallSlide()
+   {
+      if (!isGrounded && WallChecking() && _input.horizontal != 0)
+      {
+         isWallSliding = true;
+         _rb.linearVelocity = new Vector2(_rb.linearVelocityX, Mathf.Max(_rb.linearVelocityY, -wallSlideSpeed));
+      }
+      else
+      {
+         isWallSliding = false;
+      }
+   }
+
    private void OnDrawGizmos()
    {
       Gizmos.color = Color.yellow;
       Gizmos.DrawWireCube(groundCheck.position, groundBoxSize);
+      Gizmos.DrawWireCube(wallCheck.position, wallCheckSize);
    }
 }
