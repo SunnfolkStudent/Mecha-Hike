@@ -6,6 +6,10 @@ public class BuggerEnemy : MonoBehaviour
 {
     public float moveSpeed;
 
+    public float buggerHealth = 1f;
+    private float _damageCooldownTimer;
+    private float _damageCooldown = 0.5f;
+
     public LayerMask whatIsWall;
     public Transform wallCheck;
     public Transform fallCheck;
@@ -32,6 +36,23 @@ public class BuggerEnemy : MonoBehaviour
     private void FixedUpdate()
     {
         _rb.linearVelocityX = moveSpeed;
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Thruster"))
+        {
+            if (Time.time >= _damageCooldownTimer)
+            {
+                buggerHealth -= 0.5f;
+                _damageCooldownTimer = Time.time + _damageCooldown;
+            }
+
+            if (buggerHealth == 0f)
+            {
+                gameObject.SetActive(false);
+            }
+        }
     }
 
     private bool DetectedWallOrFall()

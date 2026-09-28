@@ -4,32 +4,41 @@ using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
+   [Header("Player Movement")]
    public float moveSpeed = 5f;
    public float jumpSpeed = 3f;
    public float jetForce = 2f;
-   
-   public float playerHealth = 10;
-   private float _damageCooldownTimer;
-   private float _damageCooldown = 1;
 
+   [Header("Health & Damage")]
+   public float playerHealth = 3;
+   private float _damageCooldownTimer;
+   private float _damageCooldownSlow = 1.5f;
+  // private float _damageCooldownFast = 0.5f;
+   //private float _damageCooldown = 1f;
+
+   [Header("Ground Check")]
    public bool isGrounded;
    public Transform groundCheck;
    public LayerMask whatIsGround;
    public Vector2 groundBoxSize =  new Vector2(0.8f, 0.2f);
    
+   [Header("Wall Check")]
    public Transform wallCheck;
    public LayerMask whatIsWall;
    public Vector2 wallCheckSize = new Vector2(0.8f, 0.2f);
    
+   [Header("Timers & cooldowns")]
    public float jumpTimer;
    public float jetTimer;
    public float jetCoolDown;
 
+   [Header("Jet functions")]
    public Transform thrusters;
    public Transform heightLimitTransform;
    public float heightLimit; 
    //public LayerMask whatIsEnemy;
    
+   [Header("WallSlide & direction")]
    public bool isWallSliding;
    public bool isFacingRight;
    public float wallSlideSpeed = 2f;
@@ -42,6 +51,7 @@ public class PlayerController : MonoBehaviour
    {
       _input = GetComponent<InputManager>();
       _rb = GetComponent<Rigidbody2D>();
+      jetCoolDown = 0f;
    }
 
    private void Update()
@@ -50,6 +60,7 @@ public class PlayerController : MonoBehaviour
       ProcessWallSlide();
       Flip();
       
+      #region Jet/jump functions
       jumpTimer -= Time.deltaTime;
       jetCoolDown -= Time.deltaTime;
       
@@ -85,22 +96,15 @@ public class PlayerController : MonoBehaviour
       {
          _rb.linearVelocityY = 0;
          jetTimer = 0;
-         jetCoolDown = 4f;
+         jetCoolDown = 2f;
       }
+      #endregion
       
    }
    
    private void FixedUpdate()
    {
       _rb.linearVelocityX = _input.horizontal * moveSpeed;
-   }
-
-   private void OnTriggerEnter2D(Collider2D other)
-   {
-      if (other.gameObject.layer == 7)
-      {
-         other.gameObject.SetActive(false);
-      }
    }
    
    private void OnCollisionStay2D(Collision2D other)
@@ -121,7 +125,7 @@ public class PlayerController : MonoBehaviour
       if (Time.time > _damageCooldownTimer)
       {
          playerHealth -= 1;
-         _damageCooldownTimer = Time.time + _damageCooldown;
+         _damageCooldownTimer = Time.time + _damageCooldownSlow;
          //add hurt sound and animation
       }
 
@@ -141,11 +145,11 @@ public class PlayerController : MonoBehaviour
       {
          if (_input.horizontal > 0)
          {
-            _directionFacing = 2;
+            _directionFacing = 1;
          }
          else if (_input.horizontal < 0)
          {
-            _directionFacing = -2;
+            _directionFacing = -1;
          }
          
          isFacingRight = _input.horizontal < 0;
