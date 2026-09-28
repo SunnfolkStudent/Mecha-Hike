@@ -141,11 +141,11 @@ public class PlayerController : MonoBehaviour
       {
          if (_input.horizontal > 0)
          {
-            _directionFacing = 2;
+            _directionFacing = 1;
          }
          else if (_input.horizontal < 0)
          {
-            _directionFacing = -2;
+            _directionFacing = -1;
          }
          
          isFacingRight = _input.horizontal < 0;
