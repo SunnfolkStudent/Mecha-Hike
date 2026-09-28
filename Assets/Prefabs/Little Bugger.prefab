@@ -77,7 +77,7 @@ GameObject:
   - component: {fileID: 1876702097462665362}
   m_Layer: 7
   m_Name: Little Bugger
-  m_TagString: Bugger
+  m_TagString: LowDamage
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -236,6 +236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuggerEnemy
   moveSpeed: 1
+  buggerHealth: 1
   whatIsWall:
     serializedVersion: 2
     m_Bits: 64

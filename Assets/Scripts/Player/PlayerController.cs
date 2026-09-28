@@ -12,9 +12,7 @@ public class PlayerController : MonoBehaviour
    [Header("Health & Damage")]
    public float playerHealth = 3;
    private float _damageCooldownTimer;
-   private float _damageCooldownSlow = 1.5f;
-  // private float _damageCooldownFast = 0.5f;
-   //private float _damageCooldown = 1f;
+   private float _damageCooldown = 1f;
 
    [Header("Ground Check")]
    public bool isGrounded;
@@ -30,6 +28,7 @@ public class PlayerController : MonoBehaviour
    [Header("Timers & cooldowns")]
    public float jumpTimer;
    public float jetTimer;
+   public float jetExhaust;
    public float jetCoolDown;
 
    [Header("Jet functions")]
@@ -92,7 +91,7 @@ public class PlayerController : MonoBehaviour
          _rb.gravityScale = 2;
       }
       
-      if (jetTimer > 3)
+      if (jetTimer > jetExhaust)
       {
          _rb.linearVelocityY = 0;
          jetTimer = 0;
@@ -109,9 +108,10 @@ public class PlayerController : MonoBehaviour
    
    private void OnCollisionStay2D(Collision2D other)
    {
-      if (other.gameObject.CompareTag("Bugger"))
+      if (other.gameObject.layer == 7)
       {
-         TakeDamage();
+         TakeDamage(other.gameObject.tag);
+         Debug.Log("Damaged");
       }
    }
 
@@ -120,13 +120,29 @@ public class PlayerController : MonoBehaviour
       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
    }
 
-   private void TakeDamage()
+   private void TakeDamage(string enemyTag)
    {
       if (Time.time > _damageCooldownTimer)
       {
-         playerHealth -= 1;
-         _damageCooldownTimer = Time.time + _damageCooldownSlow;
+         if (enemyTag == "LowDamage")
+         {
+            playerHealth -= 0.5f;
+            Debug.Log("LowDamage");
+         }
+
+         if (enemyTag == "MediumDamage")
+         {
+            playerHealth -= 1f;
+            Debug.Log("MediumDamage");
+         }
+
+         if (enemyTag == "HighDamage")
+         {
+            playerHealth -= 1.5f;
+         }
          //add hurt sound and animation
+         _damageCooldownTimer = Time.time + _damageCooldown;
+         Debug.Log("TakeDamage");
       }
 
       if (playerHealth == 0)
