@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
    public float jumpTimer;
    public float jetTimer;
    public float jetCoolDown;
+   public float jetExhausted = 2f;
 
    public Transform thrusters;
    public Transform heightLimitTransform;
@@ -81,7 +82,7 @@ public class PlayerController : MonoBehaviour
          _rb.gravityScale = 2;
       }
       
-      if (jetTimer > 3)
+      if (jetTimer > jetExhausted)
       {
          _rb.linearVelocityY = 0;
          jetTimer = 0;
