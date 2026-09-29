@@ -87,11 +87,15 @@ public class PlayerController : MonoBehaviour
       {
          thrusters.gameObject.SetActive(false);
       }
-      if (isGrounded && _input.jumpPressed)
+      if (isGrounded)
       {
-         //heightLimit = heightLimitTransform.localPosition.y;
-         _rb.linearVelocityY = jumpSpeed;
-         jumpTimer = 0.3f;
+         jetCoolDown = 0;
+         if (_input.jumpPressed)
+         {
+            //heightLimit = heightLimitTransform.localPosition.y;
+            _rb.linearVelocityY = jumpSpeed;
+            jumpTimer = 0.3f;
+         }
       }
       else
       {
