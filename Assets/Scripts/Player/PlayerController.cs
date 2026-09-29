@@ -115,6 +115,14 @@ public class PlayerController : MonoBehaviour
       }
    }
 
+   private void OnCollisionEnter2D(Collision2D other)
+   {
+      if (other.gameObject.layer == 7)
+      {
+         TakeDamage(other.gameObject.tag);
+      }
+   }
+
    private void RestartScene()
    {
       SceneManager.LoadScene(SceneManager.GetActiveScene().name);

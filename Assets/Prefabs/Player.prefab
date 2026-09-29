@@ -363,7 +363,7 @@ MonoBehaviour:
   wallCheckSize: {x: 0.8, y: 0.2}
   jumpTimer: 0
   jetTimer: 0
-  jetExhaust: 0
+  jetExhaust: 2
   jetCoolDown: 3
   thrusters: {fileID: 2249777569595082994}
   heightLimitTransform: {fileID: 4296921297419101089}
