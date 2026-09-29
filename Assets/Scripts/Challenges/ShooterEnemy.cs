@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public class ShooterEnemy : MonoBehaviour
@@ -6,37 +7,104 @@ public class ShooterEnemy : MonoBehaviour
     public Transform projectileSpawn;
     private float _shootTimer;
 
+    public float shooterHealth = 1f;
+    private float _damageCooldownTimer;
+    private float _damageCooldown = 0.5f;
+
     private float _angle;
     private Vector2 _enemyCenter;
 
     public Transform target; //player
+    public float sightRange;
+    public bool targetSeen;
+    
     private Rigidbody2D _rb;
+    private Animator _animator;
+    public bool isFacingRight;
+    private float _directionFacing;
 
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
         _enemyCenter = GetComponent<Renderer>().bounds.center;
+        _animator = GetComponent<Animator>();
+        isFacingRight = false;
     }
 
     private void Update()
     {
-        //_angle = target.position - transform.position;
+        Flip();
         _shootTimer += Time.deltaTime;
         
         //makes projectileSpawn rotate towards player
         _angle = Mathf.Atan2(target.position.y - projectileSpawn.position.y, target.position.x - projectileSpawn.position.x) * Mathf.Rad2Deg;
-        projectileSpawn.rotation = Quaternion.Euler(0f, 0f, _angle);
+        //projectileSpawn.rotation = Quaternion.Euler(0f, 0f, _angle);
         
         //keeps projectileSpawn in a radius around the enemy while it's moving
-        Vector2 allowedPos = target.position - transform.position;
-        allowedPos = Vector2.ClampMagnitude(allowedPos, 1f);
+       /* Vector2 allowedPos = target.position - transform.position;
+        allowedPos = Vector2.ClampMagnitude(allowedPos, 0.5f);
 
-        projectileSpawn.position = _enemyCenter + allowedPos;
+        projectileSpawn.position = _enemyCenter + allowedPos;*/
         
-        if (_shootTimer > 2)
+        transform.localRotation = Quaternion.Euler(0f, 0f, _angle);
+        
+        if (Vector2.Distance(target.position, transform.position) < sightRange)
         {
-            Instantiate(projectile, projectileSpawn.position, projectileSpawn.rotation); 
+            targetSeen = true;
+        }
+        else if (Vector2.Distance(target.position, transform.position) > sightRange)
+        {
+            targetSeen = false;
+        }
+        
+        if (_shootTimer > 2 && targetSeen)
+        { 
+            _animator.Play("shooter_attack");
             _shootTimer = 0;
         }
+    }
+
+    private void Bullet()
+    {
+        Instantiate(projectile, projectileSpawn.position, projectileSpawn.rotation); 
+    }
+
+    private void Flip()
+    {
+        if (target.position.x - transform.position.x > 0)
+        {
+            _directionFacing = 1f;
+        }
+        else if (target.position.x - transform.position.x < 0)
+        {
+            _directionFacing = -1f;
+        }
+        
+        if (transform.localScale.y != _directionFacing)
+        {
+            transform.localScale = new Vector3(transform.localScale.x, _directionFacing, transform.localScale.z);
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.CompareTag("Thruster"))
+        {
+            if (Time.time >= _damageCooldownTimer)
+            {
+                shooterHealth -= 0.5f;
+                _damageCooldownTimer = Time.time + _damageCooldown;
+            }
+
+            if (shooterHealth == 0f)
+            {
+                gameObject.SetActive(false);
+            }
+        }
+    }
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, sightRange);
     }
 }

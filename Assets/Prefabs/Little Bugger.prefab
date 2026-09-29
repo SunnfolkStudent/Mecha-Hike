@@ -75,6 +75,7 @@ GameObject:
   - component: {fileID: 1103306318996181692}
   - component: {fileID: 4538593497936839019}
   - component: {fileID: 1876702097462665362}
+  - component: {fileID: 274204247361752453}
   m_Layer: 7
   m_Name: Little Bugger
   m_TagString: LowDamage
@@ -149,7 +150,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: -3661986311675933098, guid: b921271f848630445aaa28d0a28954f2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -246,6 +247,28 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   enemyCheck: {fileID: 2067886230361507154}
+--- !u!95 &274204247361752453
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7613553493997240831}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ce3636224f4c3824a89edd6124b836b3, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &8243617452259368145
 GameObject:
   m_ObjectHideFlags: 0

@@ -18,14 +18,20 @@ public class BuggerEnemy : MonoBehaviour
     public Transform enemyCheck;
     
     private Rigidbody2D _rb;
+    private Animator _animator;
+    private bool _isDead;
+    private float _deathTime;
 
     private void Start()
     {
         _rb = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
+        _isDead = false;
     }
 
     private void Update()
     {
+        UpdateAnimation();
         if (DetectedWallOrFall() || DetectedEnemy())
         {   
             moveSpeed *= -1;
@@ -38,21 +44,44 @@ public class BuggerEnemy : MonoBehaviour
         _rb.linearVelocityX = moveSpeed;
     }
 
+    private void UpdateAnimation()
+    {
+        if (_isDead) return;
+        if (Time.time <= _deathTime) return;
+        if (_rb.linearVelocityX != 0f)
+        {
+            _animator.Play("bugger_walk");
+        }
+        else
+        {
+            _animator.Play("bugger_idle");
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.CompareTag("Thruster"))
         {
             if (Time.time >= _damageCooldownTimer)
             {
+                if (_isDead) return;
                 buggerHealth -= 0.5f;
+                _animator.Play("bugger_hit");
                 _damageCooldownTimer = Time.time + _damageCooldown;
+                _deathTime = Time.time;
             }
 
-            if (buggerHealth == 0f)
+            if (buggerHealth == 0f && !_isDead)
             {
-                gameObject.SetActive(false);
+                _animator.Play("Bugger_Death");
+                _isDead = true;
             }
         }
+    }
+
+    private void Death()
+    {
+        gameObject.SetActive(false);
     }
 
     private bool DetectedWallOrFall()
