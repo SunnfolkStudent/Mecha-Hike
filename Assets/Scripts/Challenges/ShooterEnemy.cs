@@ -38,7 +38,5 @@ public class ShooterEnemy : MonoBehaviour
             Instantiate(projectile, projectileSpawn.position, projectileSpawn.rotation); 
             _shootTimer = 0;
         }
-            //move projectile spawn towards target (rotate around enemy)
     }
-    // Instantiate(projectile, projectileSpawn.position)
 }
