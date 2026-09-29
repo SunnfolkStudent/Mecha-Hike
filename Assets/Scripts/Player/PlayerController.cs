@@ -34,8 +34,6 @@ public class PlayerController : MonoBehaviour
 
    [Header("Jet functions")]
    public Transform thrusters;
-   public Transform heightLimitTransform;
-   public float heightLimit; 
    //public LayerMask whatIsEnemy;
    
    [Header("WallSlide & direction")]
@@ -47,6 +45,7 @@ public class PlayerController : MonoBehaviour
    private InputManager _input;
    private Rigidbody2D _rb;
    private Animator _animator;
+   private Animator _childAnimator;
 
    private float _deathTime;
    private bool _isDead;
@@ -56,6 +55,7 @@ public class PlayerController : MonoBehaviour
       _input = GetComponent<InputManager>();
       _rb = GetComponent<Rigidbody2D>();
       _animator = GetComponent<Animator>();
+      _childAnimator = GetComponentInChildren<Animator>();
       canMove = true;
       jetCoolDown = 0f;
    }
@@ -74,14 +74,10 @@ public class PlayerController : MonoBehaviour
       if (_input.jumpHeld && jumpTimer <= 0 && jetCoolDown <= 0)
       { 
          thrusters.gameObject.SetActive(true);
-        //animation thrusters
+         _childAnimator.Play("jetpack_fire_Clip");
          _rb.gravityScale = 0;
          _rb.linearVelocityY = jetForce;
          jetTimer += Time.deltaTime;
-        /* if (_rb.transform.position.y >= heightLimit)
-         {
-            _rb.linearVelocityY = 0;
-         }*/
       }
       else
       {
@@ -92,7 +88,6 @@ public class PlayerController : MonoBehaviour
          jetCoolDown = 0;
          if (_input.jumpPressed)
          {
-            //heightLimit = heightLimitTransform.localPosition.y;
             _rb.linearVelocityY = jumpSpeed;
             jumpTimer = 0.3f;
          }
