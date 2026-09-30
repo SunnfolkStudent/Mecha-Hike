@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
       if (_input.jumpHeld && jumpTimer <= 0 && jetCoolDown <= 0)
       { 
          thrusters.gameObject.SetActive(true);
-         _childAnimator.Play(0);
+         //_childAnimator.Play(0);
          _rb.gravityScale = 0;
          _rb.linearVelocityY = jetForce;
          jetTimer += Time.deltaTime;
@@ -133,13 +133,17 @@ public class PlayerController : MonoBehaviour
       }
       else
       {
-         if (jumpTimer < 0)
+         if (_input.jumpHeld)
          {
             _animator.Play("fly");
          }
-         else
+         else if (_input.jumpPressed)
          {
             _animator.Play("jump");
+         }
+         else
+         {
+            _animator.Play("idle");
          }
       }
    }

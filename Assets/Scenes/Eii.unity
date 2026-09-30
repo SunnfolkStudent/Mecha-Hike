@@ -1374,11 +1374,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5722985589488544328, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.48
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 5722985589488544328, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.06
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: 5722985589488544328, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1415,10 +1415,6 @@ PrefabInstance:
     - target: {fileID: 8799882428580803376, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
       propertyPath: m_Name
       value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 8799882428580803376, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1476,10 +1472,6 @@ PrefabInstance:
     - target: {fileID: 7613553493997240831, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
       propertyPath: m_Name
       value: Little Bugger
-      objectReference: {fileID: 0}
-    - target: {fileID: 7613553493997240831, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1600,13 +1592,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 545746900104356826, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
+      propertyPath: m_Size.y
+      value: 0.3777939
+      objectReference: {fileID: 0}
+    - target: {fileID: 545746900104356826, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
+      propertyPath: m_Offset.y
+      value: 0.18889695
+      objectReference: {fileID: 0}
     - target: {fileID: 7466280918430529567, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
       propertyPath: m_Name
       value: Shooter Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 7466280918430529567, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8243469658908181265, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
       propertyPath: target
