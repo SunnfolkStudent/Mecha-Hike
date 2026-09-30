@@ -23,10 +23,10 @@ public class StretcherEnemy : MonoBehaviour
     private float _damageCooldownTimer;
     private float _damageCooldown = 0.5f;
     public float stretcherHealth = 2f;
-    private float _heightOffsett = 0.5f;
 
     public PlayerController playerControllerScript;
-    
+
+    public Transform raySpawn;
     private Animator _animator;
     private Rigidbody2D _rb;
 
@@ -34,7 +34,6 @@ public class StretcherEnemy : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("Active" + gameObject.name))
         {
-            print("enemydive--");
             PlayerPrefs.SetInt("Active" + gameObject.name, 1);
         }
         gameObject.SetActive(PlayerPrefs.GetInt("Active" + gameObject.name) != 0);
@@ -110,12 +109,10 @@ public class StretcherEnemy : MonoBehaviour
 
     private void IsAttacking()
     {
-        Vector2 origin = (Vector2)transform.position + (Vector2.up * _heightOffsett);
-        var hit = Physics2D.CircleCast(transform.position, attackRadius, Vector2.up);
-        if (hit)
+        var hit = Physics2D.Raycast(raySpawn.position, Vector2.up, attackRadius, ~LayerMask.GetMask("Enemy"));
+        if (hit.collider.CompareTag("Player"))
         {
             Debug.Log("Player Hit");
-            //playerControllerScript.playerHealth -= 1;
             playerControllerScript.TakeDamage("MediumDamage");
         }
     }

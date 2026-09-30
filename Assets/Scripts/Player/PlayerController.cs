@@ -178,10 +178,11 @@ public class PlayerController : MonoBehaviour
       }
    }
 
-   private void OnTriggerEnter(Collider other)
+   private void OnTriggerEnter2D(Collider2D other)
    {
       if (other.CompareTag("checkpoint"))
       {
+         Debug.Log("checkpoint");
          PlayerPrefs.SetFloat("PlayerPositionX", transform.position.x);
          PlayerPrefs.SetFloat("PlayerPositionY", transform.position.y);
          _enemyController.OnSave();

@@ -21,6 +21,16 @@ public class BuggerEnemy : MonoBehaviour
     private Animator _animator;
     private bool _isDead;
     private float _deathTime;
+    
+    private void Awake()
+    {
+        _animator = GetComponent<Animator>();
+        if (!PlayerPrefs.HasKey("Active" + gameObject.name))
+        {
+            PlayerPrefs.SetInt("Active" + gameObject.name, 1);
+        }
+        gameObject.SetActive(PlayerPrefs.GetInt("Active" + gameObject.name) != 0);
+    }
 
     private void Start()
     {

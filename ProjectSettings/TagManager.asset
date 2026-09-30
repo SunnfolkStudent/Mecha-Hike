@@ -9,6 +9,7 @@ TagManager:
   - LowDamage
   - MediumDamage
   - HighDamage
+  - checkpoint
   layers:
   - Default
   - TransparentFX

@@ -27,7 +27,6 @@ public class ShooterEnemy : MonoBehaviour
     {
         if (!PlayerPrefs.HasKey("Active" + gameObject.name))
         {
-            print("enemydive--");
             PlayerPrefs.SetInt("Active" + gameObject.name, 1);
         }
         gameObject.SetActive(PlayerPrefs.GetInt("Active" + gameObject.name) != 0);

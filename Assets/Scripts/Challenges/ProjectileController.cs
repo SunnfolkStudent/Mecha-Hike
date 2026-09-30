@@ -10,14 +10,7 @@ public class ProjectileController : MonoBehaviour
     private void Awake()
     {
         _animator = GetComponent<Animator>();
-        if (!PlayerPrefs.HasKey("Active" + gameObject.name))
-        {
-            print("enemydive--");
-            PlayerPrefs.SetInt("Active" + gameObject.name, 1);
-        }
-        gameObject.SetActive(PlayerPrefs.GetInt("Active" + gameObject.name) != 0);
     }
-    
     private void Start()
     {
         _rigidbody = GetComponent<Rigidbody2D>();
