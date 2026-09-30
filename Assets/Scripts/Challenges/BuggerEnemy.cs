@@ -22,6 +22,8 @@ public class BuggerEnemy : MonoBehaviour
     private bool _isDead;
     private float _deathTime;
     
+    public PlayerController playerControllerScript;
+    
     private void Awake()
     {
         _animator = GetComponent<Animator>();
@@ -76,7 +78,7 @@ public class BuggerEnemy : MonoBehaviour
             if (Time.time >= _damageCooldownTimer)
             {
                 if (_isDead) return;
-                buggerHealth -= 0.5f;
+                buggerHealth -= 1f;
                 _animator.Play("bugger_hit");
                 _damageCooldownTimer = Time.time + _damageCooldown;
                 _deathTime = Time.time;
@@ -93,6 +95,7 @@ public class BuggerEnemy : MonoBehaviour
     private void Death()
     {
         gameObject.SetActive(false);
+        playerControllerScript.Healing();
     }
 
     private bool DetectedWall()

@@ -139,13 +139,14 @@ public class StretcherEnemy : MonoBehaviour
         {
             if (Time.time >= _damageCooldownTimer)
             {
-                stretcherHealth -= 0.5f;
+                stretcherHealth -= 1f;
                 _damageCooldownTimer = Time.time + _damageCooldown;
             }
 
             if (stretcherHealth == 0f)
             {
                 gameObject.SetActive(false);
+                playerControllerScript.Healing();
             }
         }
     }

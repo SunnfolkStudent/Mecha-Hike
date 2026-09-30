@@ -469,26 +469,6 @@ CompositeCollider2D:
   m_GenerationType: 0
   m_EdgeRadius: 0
   m_ColliderPaths:
-  - m_Collider: {fileID: 5100381480776168560}
-    m_ColliderPaths:
-    - - X: -127406
-        Y: 1913265
-      - X: -2280097
-        Y: 1913265
-      - X: -2280097
-        Y: -61730
-      - X: -127406
-        Y: -61730
-  - m_Collider: {fileID: 8352415081664229680}
-    m_ColliderPaths:
-    - - X: 2280097
-        Y: 1913265
-      - X: 868172
-        Y: 1913265
-      - X: 868172
-        Y: -92595
-      - X: 2280097
-        Y: -92595
   - m_Collider: {fileID: 7953664664347379264}
     m_ColliderPaths:
     - - X: 1014614
@@ -509,6 +489,26 @@ CompositeCollider2D:
         Y: 1203750
       - X: 1662788
         Y: 1203750
+  - m_Collider: {fileID: 5100381480776168560}
+    m_ColliderPaths:
+    - - X: -127406
+        Y: 1913265
+      - X: -2280097
+        Y: 1913265
+      - X: -2280097
+        Y: -61730
+      - X: -127406
+        Y: -61730
+  - m_Collider: {fileID: 8352415081664229680}
+    m_ColliderPaths:
+    - - X: 2280097
+        Y: 1913265
+      - X: 868172
+        Y: 1913265
+      - X: 868172
+        Y: -92595
+      - X: 2280097
+        Y: -92595
   m_CompositePaths:
     m_Paths:
     - - {x: 0.2279804, y: -0.009259501}

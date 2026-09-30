@@ -211,7 +211,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuggerEnemy
   moveSpeed: 1
-  buggerHealth: 0.5
+  buggerHealth: 1
   whatIsWall:
     serializedVersion: 2
     m_Bits: 8
@@ -221,6 +221,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   enemyCheck: {fileID: 2067886230361507154}
+  playerControllerScript: {fileID: 0}
 --- !u!95 &274204247361752453
 Animator:
   serializedVersion: 7
