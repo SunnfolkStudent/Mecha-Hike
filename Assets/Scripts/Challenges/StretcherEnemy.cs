@@ -30,6 +30,15 @@ public class StretcherEnemy : MonoBehaviour
     private Animator _animator;
     private Rigidbody2D _rb;
 
+    private void Awake()
+    {
+        if (!PlayerPrefs.HasKey("Active" + gameObject.name))
+        {
+            print("enemydive--");
+            PlayerPrefs.SetInt("Active" + gameObject.name, 1);
+        }
+        gameObject.SetActive(PlayerPrefs.GetInt("Active" + gameObject.name) != 0);
+    }
     private void Start()
     {
         _animator = GetComponent<Animator>();
