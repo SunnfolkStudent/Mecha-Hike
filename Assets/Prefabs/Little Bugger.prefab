@@ -210,7 +210,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a798b5de9f70664b9d6b2c6b380f7ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::BuggerEnemy
-  moveSpeed: 1
+  moveSpeed: 1.5
   buggerHealth: 1
   whatIsWall:
     serializedVersion: 2

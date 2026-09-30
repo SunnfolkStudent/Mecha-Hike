@@ -380,7 +380,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 2
+  m_GravityScale: 4
   m_Material: {fileID: 6200000, guid: a61e5010fa2111b46b2d7d38c1442df0, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
@@ -406,7 +406,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
   moveSpeed: 5
   jumpSpeed: 10
-  jetForce: 4
+  jetForce: 5
   canMove: 0
   playerHealth: 6
   _damageCooldownTimer: 0
@@ -427,6 +427,8 @@ MonoBehaviour:
   jetCoolDown: 5
   thrusters: {fileID: 2249777569595082994}
   isFacingRight: 0
+  soundControl: {fileID: 0}
+  jet: {fileID: 0}
 --- !u!114 &1580181455019148920
 MonoBehaviour:
   m_ObjectHideFlags: 0
