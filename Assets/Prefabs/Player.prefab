@@ -421,8 +421,8 @@ MonoBehaviour:
   wallCheckSize: {x: 0.8, y: 0.2}
   jumpTimer: 0
   jetTimer: 0
-  jetExhaust: 2
-  jetCoolDown: 3
+  jetExhaust: 1
+  jetCoolDown: 5
   thrusters: {fileID: 2249777569595082994}
   isWallSliding: 0
   isFacingRight: 0
