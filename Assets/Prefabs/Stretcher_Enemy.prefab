@@ -291,6 +291,7 @@ MonoBehaviour:
     m_Bits: 128
   stretcherHealth: 2
   playerControllerScript: {fileID: 0}
+  soundControl: {fileID: 0}
   raySpawn: {fileID: 8846511172698809643}
 --- !u!61 &9160341834334110007
 BoxCollider2D:

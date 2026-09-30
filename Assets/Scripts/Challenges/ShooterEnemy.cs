@@ -17,12 +17,15 @@ public class ShooterEnemy : MonoBehaviour
     public Transform target; //player
     public float sightRange;
     public bool targetSeen;
+
+    private bool _isDead;
     
     private Rigidbody2D _rb;
     private Animator _animator;
     public bool isFacingRight;
     private float _directionFacing;
     public PlayerController playerControllerScript;
+    public SoundController soundControl;
 
     private void Awake()
     {
@@ -31,6 +34,7 @@ public class ShooterEnemy : MonoBehaviour
             PlayerPrefs.SetInt("Active" + gameObject.name, 1);
         }
         gameObject.SetActive(PlayerPrefs.GetInt("Active" + gameObject.name) != 0);
+        _isDead = false;
     }
 
     private void Start()
@@ -68,7 +72,9 @@ public class ShooterEnemy : MonoBehaviour
         }
         
         if (_shootTimer > 2 && targetSeen)
-        { 
+        {
+            if (_isDead) return;
+            if (Time.time <= _damageCooldownTimer) return;
             _animator.Play("shooter_attack");
             _shootTimer = 0;
         }
@@ -95,6 +101,12 @@ public class ShooterEnemy : MonoBehaviour
             transform.localScale = new Vector3(transform.localScale.x, _directionFacing, transform.localScale.z);
         }
     }
+    
+    public void Death()
+    {
+        gameObject.SetActive(false);
+        playerControllerScript.Healing();
+    }
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -102,14 +114,18 @@ public class ShooterEnemy : MonoBehaviour
         {
             if (Time.time >= _damageCooldownTimer)
             {
+                if (_isDead) return;
                 shooterHealth -= 1f;
                 _damageCooldownTimer = Time.time + _damageCooldown;
+                _animator.Play("shooter_hit");
             }
 
-            if (shooterHealth == 0f)
+            if (shooterHealth == 0f && !_isDead)
             {
-                gameObject.SetActive(false);
-                playerControllerScript.Healing();
+                _isDead = true;
+                _rb.linearVelocityX = 0;
+                //soundControl.EnemyDeath();
+                _animator.Play("shooter_death");
             }
         }
     }

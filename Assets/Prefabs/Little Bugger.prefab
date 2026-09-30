@@ -222,6 +222,7 @@ MonoBehaviour:
     m_Bits: 128
   enemyCheck: {fileID: 2067886230361507154}
   playerControllerScript: {fileID: 0}
+  soundControl: {fileID: 0}
 --- !u!95 &274204247361752453
 Animator:
   serializedVersion: 7

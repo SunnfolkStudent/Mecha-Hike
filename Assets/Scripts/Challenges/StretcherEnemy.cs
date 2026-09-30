@@ -23,8 +23,10 @@ public class StretcherEnemy : MonoBehaviour
     private float _damageCooldownTimer;
     private float _damageCooldown = 0.5f;
     public float stretcherHealth = 2f;
+    private bool _isDead;
 
     public PlayerController playerControllerScript;
+    public SoundController soundControl;
 
     public Transform raySpawn;
     private Animator _animator;
@@ -37,6 +39,7 @@ public class StretcherEnemy : MonoBehaviour
             PlayerPrefs.SetInt("Active" + gameObject.name, 1);
         }
         gameObject.SetActive(PlayerPrefs.GetInt("Active" + gameObject.name) != 0);
+        _isDead = false;
     }
     private void Start()
     {
@@ -84,6 +87,8 @@ public class StretcherEnemy : MonoBehaviour
 
     private void UpdateAnimation()
     {
+        if (_isDead) return;
+        if (Time.time <= _damageCooldownTimer) return;
         if (_isAttacking)
         {
             _animator.Play("stretcher_attack");
@@ -139,16 +144,26 @@ public class StretcherEnemy : MonoBehaviour
         {
             if (Time.time >= _damageCooldownTimer)
             {
+                if (_isDead) return;
                 stretcherHealth -= 1f;
                 _damageCooldownTimer = Time.time + _damageCooldown;
+                _animator.Play("stretcher_hit");
             }
 
-            if (stretcherHealth == 0f)
+            if (stretcherHealth == 0f && !_isDead)
             {
-                gameObject.SetActive(false);
-                playerControllerScript.Healing();
+                _isDead = true;
+                _rb.linearVelocityX = 0;
+                //soundControl.EnemyDeath();
+               _animator.Play("stretcher_death");
             }
         }
+    }
+
+    public void Death()
+    {
+        gameObject.SetActive(false);
+        playerControllerScript.Healing();
     }
 
     private void OnDrawGizmos()

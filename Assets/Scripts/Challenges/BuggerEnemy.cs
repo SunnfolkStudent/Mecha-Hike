@@ -23,6 +23,7 @@ public class BuggerEnemy : MonoBehaviour
     private float _deathTime;
     
     public PlayerController playerControllerScript;
+    public SoundController soundControl;
     
     private void Awake()
     {
@@ -32,6 +33,7 @@ public class BuggerEnemy : MonoBehaviour
             PlayerPrefs.SetInt("Active" + gameObject.name, 1);
         }
         gameObject.SetActive(PlayerPrefs.GetInt("Active" + gameObject.name) != 0);
+        _isDead = false;
     }
 
     private void Start()
@@ -70,6 +72,7 @@ public class BuggerEnemy : MonoBehaviour
             _animator.Play("bugger_idle");
         }
     }
+    
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -84,9 +87,10 @@ public class BuggerEnemy : MonoBehaviour
                 _deathTime = Time.time;
             }
 
-            if (buggerHealth == 0f && !_isDead)
+            if (buggerHealth == 0f)
             {
-                _animator.Play("Bugger_Death");
+               _animator.Play("Bugger_Death");
+                //soundControl.EnemyDeath();
                 _isDead = true;
             }
         }
