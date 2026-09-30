@@ -74,7 +74,7 @@ public class PlayerController : MonoBehaviour
       if (_input.jumpHeld && jumpTimer <= 0 && jetCoolDown <= 0)
       { 
          thrusters.gameObject.SetActive(true);
-         _childAnimator.Play("jetpack_fire_Clip");
+         _childAnimator.Play(0);
          _rb.gravityScale = 0;
          _rb.linearVelocityY = jetForce;
          jetTimer += Time.deltaTime;
