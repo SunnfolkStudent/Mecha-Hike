@@ -171,6 +171,11 @@ public class PlayerController : MonoBehaviour
          TakeDamage(other.gameObject.tag);
          Debug.Log("Damaged");
       }
+
+      if (other.gameObject.layer == 8)
+      {
+         playerHealth -= 1;
+      }
    }
 
    private void OnCollisionEnter2D(Collision2D other)
