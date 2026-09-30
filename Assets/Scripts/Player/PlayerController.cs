@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
@@ -45,10 +46,24 @@ public class PlayerController : MonoBehaviour
    private InputManager _input;
    private Rigidbody2D _rb;
    private Animator _animator;
+   private EnemyController _enemyController;
 
    private float _deathTime;
    private bool _isDead;
 
+   private void Awake()
+   {
+      _enemyController = GetComponent<EnemyController>();
+      if (!PlayerPrefs.HasKey("PlayerPositionX") || !PlayerPrefs.HasKey("PlayerPositionY"))
+      {
+         PlayerPrefs.SetFloat("PlayerPositionX", transform.position.x);
+         PlayerPrefs.SetFloat("PlayerPositionY", transform.position.y);
+      }
+      
+      transform.position = new Vector2(PlayerPrefs.GetFloat("PlayerPositionX"), 
+         PlayerPrefs.GetFloat("PlayerPositionY"));
+         
+   }
    private void Start()
    {
       _input = GetComponent<InputManager>();
@@ -61,7 +76,6 @@ public class PlayerController : MonoBehaviour
    private void Update()
    {
       UpdateAnimation();
-      ProcessWallSlide();
       Flip();
       
       #region Jet/jump functions
@@ -164,6 +178,16 @@ public class PlayerController : MonoBehaviour
       }
    }
 
+   private void OnTriggerEnter(Collider other)
+   {
+      if (other.CompareTag("checkpoint"))
+      {
+         PlayerPrefs.SetFloat("PlayerPositionX", transform.position.x);
+         PlayerPrefs.SetFloat("PlayerPositionY", transform.position.y);
+         _enemyController.OnSave();
+      }
+   }
+
    private void RestartScene()
    {
       Debug.Log("Restart");
@@ -208,15 +232,9 @@ public class PlayerController : MonoBehaviour
          _animator.Play("death2");
       }
    }
-
-   private bool WallChecking()
-   {
-      return Physics2D.OverlapCircle(wallCheck.position, 0.2f, whatIsWall);
-   }
+   
    private void Flip()
    {
-      if (!isWallSliding)
-      {
          if (_input.horizontal > 0)
          {
             _directionFacing = 1;
@@ -232,21 +250,6 @@ public class PlayerController : MonoBehaviour
          {
             transform.localScale = new Vector3(_directionFacing, transform.localScale.y, transform.localScale.z);
          }
-
-      }
-   }
-   
-   private void ProcessWallSlide()
-   {
-      if (!isGrounded && WallChecking() && _input.horizontal != 0)
-      {
-         isWallSliding = true;
-         _rb.linearVelocity = new Vector2(_rb.linearVelocityX, Mathf.Max(_rb.linearVelocityY, -wallSlideSpeed));
-      }
-      else
-      {
-         isWallSliding = false;
-      }
    }
 
    private void OnDrawGizmos()
