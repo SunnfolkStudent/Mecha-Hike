@@ -214,7 +214,7 @@ MonoBehaviour:
   buggerHealth: 0.5
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 8
   wallCheck: {fileID: 6591035865462460799}
   fallCheck: {fileID: 8847100517848156435}
   whatIsEnemy:

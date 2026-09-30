@@ -42,8 +42,9 @@ public class BuggerEnemy : MonoBehaviour
     private void Update()
     {
         UpdateAnimation();
-        if (DetectedWallOrFall() || DetectedEnemy())
+        if (DetectedWall() || DetectedEnemy() || DetectedFall())
         {   
+            Debug.Log("turning around");
             moveSpeed *= -1;
             transform.localScale = new Vector2(transform.localScale.x * -1f, 1f);
         }
@@ -94,13 +95,21 @@ public class BuggerEnemy : MonoBehaviour
         gameObject.SetActive(false);
     }
 
-    private bool DetectedWallOrFall()
+    private bool DetectedWall()
     {
-        return Physics2D.OverlapCircle(wallCheck.position, 0.1f, whatIsWall) || !Physics2D.OverlapCircle(fallCheck.position,0.2f);
+        Debug.Log("wall");
+        return Physics2D.OverlapCircle(wallCheck.position, 0.1f, whatIsWall);
+    }
+
+    private bool DetectedFall()
+    {
+        Debug.Log("fall");
+        return !Physics2D.OverlapCircle(fallCheck.position, 0.1f, whatIsWall);
     }
 
     private bool DetectedEnemy()
     {
+        Debug.Log("enemy");
         return Physics2D.OverlapCircle(enemyCheck.position, 0.01f, whatIsEnemy);
     }
 
