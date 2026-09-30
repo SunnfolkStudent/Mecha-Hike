@@ -193,7 +193,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_CompositeOperation: 0
+  m_CompositeOperation: 1
   m_CompositeOrder: 0
   m_Offset: {x: -0.0015432835, y: 0.5630965}
   m_SpriteTilingProperty:
@@ -246,6 +246,7 @@ MonoBehaviour:
   targetSeen: 0
   attackCooldown: 2
   _isAttacking: 0
+  attackRadius: 2
   moveSpeed: 2
   wallCheck: {fileID: 1863381890973691001}
   whatIsWall:
@@ -289,7 +290,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_CompositeOperation: 1
+  m_CompositeOperation: 2
   m_CompositeOrder: 0
   m_Offset: {x: -0.0015432835, y: 0.24999025}
   m_SpriteTilingProperty:
@@ -335,7 +336,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_CompositeOperation: 1
+  m_CompositeOperation: 2
   m_CompositeOrder: 0
   m_Offset: {x: -0.12037516, y: 0.09257674}
   m_SpriteTilingProperty:
@@ -381,7 +382,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_CompositeOperation: 1
+  m_CompositeOperation: 2
   m_CompositeOrder: 0
   m_Offset: {x: 0.15741348, y: 0.09103349}
   m_SpriteTilingProperty:
@@ -464,20 +465,22 @@ CompositeCollider2D:
         Y: -92595
       - X: 2280097
         Y: -92595
+  - m_Collider: {fileID: 7953664664347379264}
+    m_ColliderPaths:
+    - - X: 1014614
+        Y: 10092597
+      - X: -1045479
+        Y: 10092597
+      - X: -1045479
+        Y: 1169333
+      - X: 1014614
+        Y: 1169333
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.2279804, y: -0.009259501}
-      - {x: 0.2279804, y: 0.1913265}
-      - {x: 0.16627881, y: 0.1913559}
-      - {x: 0.1662495, y: 0.3796054}
-      - {x: -0.1693654, y: 0.37957612}
-      - {x: -0.1693948, y: 0.1913265}
-      - {x: -0.2280097, y: 0.1912972}
-      - {x: -0.2279804, y: -0.006173}
-      - {x: -0.0127406, y: -0.0061437}
-      - {x: -0.0127112, y: 0.120375}
-      - {x: 0.0868172, y: 0.1203456}
-      - {x: 0.0868465, y: -0.009259501}
+    - - {x: 0.1014321, y: 0.1169333}
+      - {x: 0.1014321, y: 1.0092597}
+      - {x: -0.1045479, y: 1.0092304}
+      - {x: -0.1045186, y: 0.1169333}
   m_VertexDistance: 0.0005
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0

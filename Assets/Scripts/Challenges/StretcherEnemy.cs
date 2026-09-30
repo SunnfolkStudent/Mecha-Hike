@@ -9,6 +9,7 @@ public class StretcherEnemy : MonoBehaviour
 
     public float attackCooldown;
     public bool _isAttacking;
+    public float attackRadius = 2f;
 
     public float moveSpeed;
     
@@ -22,6 +23,9 @@ public class StretcherEnemy : MonoBehaviour
     private float _damageCooldownTimer;
     private float _damageCooldown = 0.5f;
     public float stretcherHealth = 2f;
+    private float _heightOffsett = 0.5f;
+
+    public PlayerController playerControllerScript;
     
     private Animator _animator;
     private Rigidbody2D _rb;
@@ -92,6 +96,18 @@ public class StretcherEnemy : MonoBehaviour
         if (attackCooldown <= 0 && targetSeen && !_isAttacking)
         {
             _isAttacking = true;
+        }
+    }
+
+    private void IsAttacking()
+    {
+        Vector2 origin = (Vector2)transform.position + (Vector2.up * _heightOffsett);
+        var hit = Physics2D.CircleCast(transform.position, attackRadius, Vector2.up);
+        if (hit)
+        {
+            Debug.Log("Player Hit");
+            //playerControllerScript.playerHealth -= 1;
+            playerControllerScript.TakeDamage("MediumDamage");
         }
     }
 

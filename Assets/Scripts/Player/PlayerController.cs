@@ -45,7 +45,6 @@ public class PlayerController : MonoBehaviour
    private InputManager _input;
    private Rigidbody2D _rb;
    private Animator _animator;
-   private Animator _childAnimator;
 
    private float _deathTime;
    private bool _isDead;
@@ -55,7 +54,6 @@ public class PlayerController : MonoBehaviour
       _input = GetComponent<InputManager>();
       _rb = GetComponent<Rigidbody2D>();
       _animator = GetComponent<Animator>();
-      _childAnimator = GetComponentInChildren<Animator>();
       canMove = true;
       jetCoolDown = 0f;
    }
@@ -74,7 +72,6 @@ public class PlayerController : MonoBehaviour
       if (_input.jumpHeld && jumpTimer <= 0 && jetCoolDown <= 0)
       { 
          thrusters.gameObject.SetActive(true);
-         //_childAnimator.Play(0);
          _rb.gravityScale = 0;
          _rb.linearVelocityY = jetForce;
          jetTimer += Time.deltaTime;
@@ -173,7 +170,7 @@ public class PlayerController : MonoBehaviour
       SceneManager.LoadScene(SceneManager.GetActiveScene().name);
    }
 
-   private void TakeDamage(string enemyTag)
+   public void TakeDamage(string enemyTag)
    {
       if (Time.time > _damageCooldownTimer)
       {
@@ -193,7 +190,7 @@ public class PlayerController : MonoBehaviour
          {
             playerHealth -= 1.5f;
          }
-         //add hurt sound and animation
+         //add hurt sound
          _damageCooldownTimer = Time.time + _damageCooldown;
          Debug.Log("TakeDamage");
          
@@ -202,9 +199,11 @@ public class PlayerController : MonoBehaviour
          _animator.Play("hit");
       }
 
-      if (playerHealth == 0 && !_isDead)
+      if (playerHealth <= 0 && !_isDead)
       {
          _isDead = true;
+         canMove = false;
+         _rb.linearVelocityX = 0;
          Debug.Log("0Health");
          _animator.Play("death2");
       }

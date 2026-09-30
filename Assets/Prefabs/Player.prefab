@@ -542,7 +542,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_CompositeOperation: 1
+  m_CompositeOperation: 2
   m_CompositeOrder: 0
   m_Offset: {x: 0.0016456842, y: 0.1629221}
   m_SpriteTilingProperty:
@@ -588,7 +588,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_CompositeOperation: 1
+  m_CompositeOperation: 2
   m_CompositeOrder: 0
   m_Offset: {x: 0.004936993, y: 0.31926137}
   m_SpriteTilingProperty:
@@ -634,7 +634,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_CompositeOperation: 1
+  m_CompositeOperation: 2
   m_CompositeOrder: 0
   m_Offset: {x: -0.0016456246, y: 0.4772463}
   m_SpriteTilingProperty:
@@ -680,7 +680,7 @@ BoxCollider2D:
     m_Bits: 4294967295
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_CompositeOperation: 1
+  m_CompositeOperation: 2
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.21890005}
   m_SpriteTilingProperty:
@@ -931,16 +931,6 @@ CompositeCollider2D:
         Y: -5000000
       - X: -907086
         Y: -5000000
-  - m_Collider: {fileID: 4817729845142042148}
-    m_ColliderPaths:
-    - - X: 3437500
-        Y: -2471373
-      - X: 907086
-        Y: -2471373
-      - X: 907086
-        Y: -5000000
-      - X: 3437500
-        Y: -5000000
   - m_Collider: {fileID: 2003174104354644616}
     m_ColliderPaths:
     - - X: 3437500
@@ -951,28 +941,18 @@ CompositeCollider2D:
         Y: -3166937
       - X: 3437500
         Y: -3166937
+  - m_Collider: {fileID: 4817729845142042148}
+    m_ColliderPaths:
+    - - X: 3437500
+        Y: -2471373
+      - X: 907086
+        Y: -2471373
+      - X: 907086
+        Y: -5000000
+      - X: 3437500
+        Y: -5000000
   m_CompositePaths:
     m_Paths:
-    - - {x: 0.235106, y: 0.1911843}
-      - {x: 0.235106, y: 0.4473383}
-      - {x: 0.1627256, y: 0.4473677}
-      - {x: 0.1626963, y: 0.509874}
-      - {x: -0.1660169, y: 0.5098447}
-      - {x: -0.1660463, y: 0.4473383}
-      - {x: -0.2252613, y: 0.44730902}
-      - {x: -0.225232, y: 0.1911843}
-    - - {x: 0.2877676, y: 0.1352314}
-      - {x: 0.2877676, y: 0.1906127}
-      - {x: -0.2845056, y: 0.19058341}
-      - {x: -0.2844763, y: 0.1352314}
-    - - {x: 0.3437207, y: -0.193904}
-      - {x: 0.3437207, y: 0.13465971}
-      - {x: -0.34375, y: 0.1346304}
-      - {x: -0.3437207, y: -0.193904}
-    - - {x: 0.235106, y: -0.2433244}
-      - {x: 0.235106, y: -0.1944756}
-      - {x: -0.2351353, y: -0.1945049}
-      - {x: -0.235106, y: -0.2433244}
     - - {x: -0.0907379, y: -0.5}
       - {x: -0.0906792, y: -0.3166937}
       - {x: 0.0907086, y: -0.3167231}
