@@ -124,7 +124,7 @@ public class ShooterEnemy : MonoBehaviour
             {
                 _isDead = true;
                 _rb.linearVelocityX = 0;
-                //soundControl.EnemyDeath();
+                soundControl.ShooterDeath();
                 _animator.Play("shooter_death");
             }
         }

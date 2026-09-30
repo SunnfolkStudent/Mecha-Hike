@@ -1,5 +1,3 @@
-using System;
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -43,6 +41,8 @@ public class PlayerController : MonoBehaviour
    
    [Header("Sound")]
    public SoundController soundControl;
+   private AudioSource _audioSource;
+   public AudioClip jet;
    
    private InputManager _input;
    private Rigidbody2D _rb;
@@ -70,6 +70,7 @@ public class PlayerController : MonoBehaviour
       _input = GetComponent<InputManager>();
       _rb = GetComponent<Rigidbody2D>();
       _animator = GetComponent<Animator>();
+      _audioSource =  GetComponent<AudioSource>();
       canMove = true;
       jetCoolDown = 0f;
    }
@@ -251,20 +252,24 @@ public class PlayerController : MonoBehaviour
    
    private void Flip()
    {
+      Debug.Log("Flip");
          if (_input.horizontal > 0)
          {
             _directionFacing = 1;
+            Debug.Log("directionFacing 1");
          }
          else if (_input.horizontal < 0)
          {
             _directionFacing = -1;
+            Debug.Log("directionFacing -1");
          }
          
-         isFacingRight = _input.horizontal < 0;
+         isFacingRight = _input.horizontal > 0;
 
          if (_input.horizontal != 0 && transform.localScale.x != _directionFacing)
          {
             transform.localScale = new Vector3(_directionFacing, transform.localScale.y, transform.localScale.z);
+            Debug.Log("Flipping");
          }
    }
 
