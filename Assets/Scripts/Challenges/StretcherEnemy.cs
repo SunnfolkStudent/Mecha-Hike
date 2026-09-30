@@ -8,7 +8,7 @@ public class StretcherEnemy : MonoBehaviour
     public bool targetSeen;
 
     public float attackCooldown;
-    private bool _isAttacking;
+    public bool _isAttacking;
 
     public float moveSpeed;
     
@@ -49,6 +49,7 @@ public class StretcherEnemy : MonoBehaviour
             attackCooldown -= Time.deltaTime;
         }
         
+        
         if (!_isAttacking)
         {
             if (DetectedFallOrWall() || DetectedEnemy())
@@ -75,6 +76,7 @@ public class StretcherEnemy : MonoBehaviour
         {
             _animator.Play("stretcher_attack");
         }
+        
         else if (_rb.linearVelocityX != 0)
         {
             _animator.Play("stretcher_walk");
@@ -87,10 +89,16 @@ public class StretcherEnemy : MonoBehaviour
 
     private void Attack()
     {
-        if (attackCooldown <= 0 && targetSeen)
+        if (attackCooldown <= 0 && targetSeen && !_isAttacking)
         {
             _isAttacking = true;
         }
+    }
+
+    private void AttackDelay()
+    {
+        _isAttacking = false;
+        attackCooldown = 2f;
     }
 
     private bool DetectedFallOrWall()
