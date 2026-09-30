@@ -86,6 +86,7 @@ public class PlayerController : MonoBehaviour
       if (isGrounded)
       {
          jetCoolDown = 0;
+         jetTimer = 0;
          if (_input.jumpPressed)
          {
             _rb.linearVelocityY = jumpSpeed;
