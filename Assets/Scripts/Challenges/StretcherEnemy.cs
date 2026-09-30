@@ -146,7 +146,7 @@ public class StretcherEnemy : MonoBehaviour
 
     private void OnDrawGizmos()
     {
-        Gizmos.color = Color.yellow;
+        Gizmos.color = Color.yellow;    
         Gizmos.DrawWireSphere(transform.position, sightRange);
         Gizmos.DrawWireSphere(wallCheck.position, 0.1f);
         Gizmos.DrawWireSphere(fallCheck.position, 0.1f);

@@ -246,7 +246,7 @@ MonoBehaviour:
   targetSeen: 0
   attackCooldown: 2
   _isAttacking: 0
-  attackRadius: 2
+  attackRadius: 3
   moveSpeed: 2
   wallCheck: {fileID: 1863381890973691001}
   whatIsWall:
@@ -258,6 +258,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   stretcherHealth: 2
+  playerControllerScript: {fileID: 0}
 --- !u!61 &9160341834334110007
 BoxCollider2D:
   m_ObjectHideFlags: 0
