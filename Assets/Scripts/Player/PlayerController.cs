@@ -41,6 +41,9 @@ public class PlayerController : MonoBehaviour
    public bool isFacingRight;
    private float _directionFacing;
    
+   [Header("Sound")]
+   public SoundController soundControl;
+   
    private InputManager _input;
    private Rigidbody2D _rb;
    private Animator _animator;
@@ -87,6 +90,7 @@ public class PlayerController : MonoBehaviour
          _rb.gravityScale = 0;
          _rb.linearVelocityY = jetForce;
          jetTimer += Time.deltaTime;
+         soundControl.JetThrusters();
       }
       else
       {
@@ -100,6 +104,7 @@ public class PlayerController : MonoBehaviour
          {
             _rb.linearVelocityY = jumpSpeed;
             jumpTimer = 0.3f;
+            soundControl.PlayerJump();
          }
       }
       else
@@ -139,6 +144,7 @@ public class PlayerController : MonoBehaviour
          if (_input.horizontal != 0)
          {
             _animator.Play("walk");
+            soundControl.PlayerSteps();
          }
          else
          {
@@ -223,7 +229,7 @@ public class PlayerController : MonoBehaviour
          {
             playerHealth -= 3f;
          }
-         //add hurt sound
+         soundControl.PlayerHurt();
          _damageCooldownTimer = Time.time + _damageCooldown;
          Debug.Log("TakeDamage");
          
@@ -239,6 +245,7 @@ public class PlayerController : MonoBehaviour
          _rb.linearVelocityX = 0;
          Debug.Log("0Health");
          _animator.Play("death2");
+         soundControl.PlayerDeath();
       }
    }
    
