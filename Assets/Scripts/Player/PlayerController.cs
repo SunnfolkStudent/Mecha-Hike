@@ -12,7 +12,7 @@ public class PlayerController : MonoBehaviour
    public bool canMove;
 
    [Header("Health & Damage")]
-   public float playerHealth = 3;
+   public float playerHealth = 6;
    private float _damageCooldownTimer;
    private float _damageCooldown = 1f;
 
@@ -127,6 +127,11 @@ public class PlayerController : MonoBehaviour
       }
    }
 
+   public void Healing()
+   {
+      playerHealth += 1;
+   }
+
    private void UpdateAnimation()
    {
       if (_isDead) return;
@@ -201,19 +206,19 @@ public class PlayerController : MonoBehaviour
       {
          if (enemyTag == "LowDamage")
          {
-            playerHealth -= 0.5f;
+            playerHealth -= 1f;
             Debug.Log("LowDamage");
          }
 
          if (enemyTag == "MediumDamage")
          {
-            playerHealth -= 1f;
+            playerHealth -= 2f;
             Debug.Log("MediumDamage");
          }
 
          if (enemyTag == "HighDamage")
          {
-            playerHealth -= 1.5f;
+            playerHealth -= 3f;
          }
          //add hurt sound
          _damageCooldownTimer = Time.time + _damageCooldown;

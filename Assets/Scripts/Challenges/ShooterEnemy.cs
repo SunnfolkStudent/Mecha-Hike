@@ -22,6 +22,7 @@ public class ShooterEnemy : MonoBehaviour
     private Animator _animator;
     public bool isFacingRight;
     private float _directionFacing;
+    public PlayerController playerControllerScript;
 
     private void Awake()
     {
@@ -101,13 +102,14 @@ public class ShooterEnemy : MonoBehaviour
         {
             if (Time.time >= _damageCooldownTimer)
             {
-                shooterHealth -= 0.5f;
+                shooterHealth -= 1f;
                 _damageCooldownTimer = Time.time + _damageCooldown;
             }
 
             if (shooterHealth == 0f)
             {
                 gameObject.SetActive(false);
+                playerControllerScript.Healing();
             }
         }
     }
