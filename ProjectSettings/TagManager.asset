@@ -10,6 +10,7 @@ TagManager:
   - MediumDamage
   - HighDamage
   - checkpoint
+  - Slime
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - UI
   - Wall
   - Enemy
-  - Slime
+  - 
   - 
   - 
   - 
