@@ -91,7 +91,7 @@ public class PlayerController : MonoBehaviour
          _rb.gravityScale = 0;
          _rb.linearVelocityY = jetForce;
          jetTimer += Time.deltaTime;
-         soundControl.JetThrusters();
+         //thrusters
       }
       else
       {
@@ -105,7 +105,7 @@ public class PlayerController : MonoBehaviour
          {
             _rb.linearVelocityY = jumpSpeed;
             jumpTimer = 0.3f;
-            soundControl.PlayerJump();
+            //jump
          }
       }
       else
@@ -145,7 +145,7 @@ public class PlayerController : MonoBehaviour
          if (_input.horizontal != 0)
          {
             _animator.Play("walk");
-            soundControl.PlayerSteps();
+            //steps
          }
          else
          {
@@ -230,7 +230,7 @@ public class PlayerController : MonoBehaviour
          {
             playerHealth -= 3f;
          }
-         soundControl.PlayerHurt();
+         //hurt
          _damageCooldownTimer = Time.time + _damageCooldown;
          Debug.Log("TakeDamage");
          

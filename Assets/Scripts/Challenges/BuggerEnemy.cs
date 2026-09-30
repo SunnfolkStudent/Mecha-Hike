@@ -99,7 +99,7 @@ public class BuggerEnemy : MonoBehaviour
     {
         gameObject.SetActive(false);
         playerControllerScript.Healing();
-        soundControl.BuggerDeath();
+        //death
     }
 
     private bool DetectedWall()
