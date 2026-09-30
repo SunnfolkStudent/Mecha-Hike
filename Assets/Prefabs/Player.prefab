@@ -268,7 +268,6 @@ GameObject:
   - component: {fileID: 5863489610653999678}
   - component: {fileID: 2978235196467081062}
   - component: {fileID: 1580181455019148920}
-  - component: {fileID: 6986794677189967837}
   - component: {fileID: 718093645300946516}
   - component: {fileID: 1006193730444777420}
   - component: {fileID: 220367018852985080}
@@ -279,6 +278,7 @@ GameObject:
   - component: {fileID: 4817729845142042148}
   - component: {fileID: 2003174104354644616}
   - component: {fileID: 3688730968104881425}
+  - component: {fileID: 835685651781716949}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -389,7 +389,7 @@ Rigidbody2D:
     serializedVersion: 2
     m_Bits: 0
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 4
 --- !u!114 &2978235196467081062
@@ -408,7 +408,8 @@ MonoBehaviour:
   jumpSpeed: 10
   jetForce: 4
   canMove: 0
-  playerHealth: 3
+  playerHealth: 6
+  _damageCooldownTimer: 0
   isGrounded: 0
   groundCheck: {fileID: 7744334761560513598}
   whatIsGround:
@@ -418,16 +419,14 @@ MonoBehaviour:
   wallCheck: {fileID: 4614931350429308}
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 8
   wallCheckSize: {x: 0.8, y: 0.2}
   jumpTimer: 0
   jetTimer: 0
   jetExhaust: 1
   jetCoolDown: 5
   thrusters: {fileID: 2249777569595082994}
-  isWallSliding: 0
   isFacingRight: 0
-  wallSlideSpeed: 4
 --- !u!114 &1580181455019148920
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,20 +442,6 @@ MonoBehaviour:
   horizontal: 0
   jumpPressed: 0
   jumpHeld: 0
---- !u!114 &6986794677189967837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8799882428580803376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41f766decad76d44ea4f44aa2b93e7c3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  enemies:
-  - {fileID: 0}
 --- !u!95 &718093645300946516
 Animator:
   serializedVersion: 7
@@ -1000,3 +985,16 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 8799882428580803376}
+--- !u!114 &835685651781716949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8799882428580803376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc99e0ece61a7473ab92c385bd9c4b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  enemies: []

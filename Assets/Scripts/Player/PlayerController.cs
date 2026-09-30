@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
 
    [Header("Health & Damage")]
    public float playerHealth = 6;
-   private float _damageCooldownTimer;
+   public float _damageCooldownTimer;
    private float _damageCooldown = 1f;
 
    [Header("Ground Check")]
@@ -38,9 +38,7 @@ public class PlayerController : MonoBehaviour
    //public LayerMask whatIsEnemy;
    
    [Header("WallSlide & direction")]
-   public bool isWallSliding;
    public bool isFacingRight;
-   public float wallSlideSpeed = 2f;
    private float _directionFacing;
    
    private InputManager _input;
@@ -172,9 +170,9 @@ public class PlayerController : MonoBehaviour
          Debug.Log("Damaged");
       }
 
-      if (other.gameObject.layer == 8)
+      if (other.gameObject.CompareTag("Slime"))
       {
-         playerHealth -= 1;
+            TakeDamage(other.gameObject.tag);
       }
    }
 
@@ -209,10 +207,10 @@ public class PlayerController : MonoBehaviour
    {
       if (Time.time > _damageCooldownTimer)
       {
-         if (enemyTag == "LowDamage")
+         if (enemyTag == "LowDamage" || enemyTag == "Slime")
          {
             playerHealth -= 1f;
-            Debug.Log("LowDamage");
+            Debug.Log("LowDamage/Slime");
          }
 
          if (enemyTag == "MediumDamage")
