@@ -138,7 +138,10 @@ public class PlayerController : MonoBehaviour
 
    public void Healing()
    {
-      playerHealth += 1;
+      if (playerHealth != 6)
+      {
+         playerHealth += 1;
+      }
    }
    
    public void ThrusterSound()
@@ -251,13 +254,13 @@ public class PlayerController : MonoBehaviour
          {
             playerHealth -= 3f;
          }
-         //hurt
          _damageCooldownTimer = Time.time + _damageCooldown;
          Debug.Log("TakeDamage");
          
          if (_isDead) return;
          _deathTime = Time.time + 0.5f;
          _animator.Play("hit");
+         soundControl.PlayerHit();
       }
 
       if (playerHealth <= 0 && !_isDead)
