@@ -141,7 +141,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_MaskInteraction: 0
   m_Sprite: {fileID: 584933730012611398, guid: e0a8f72f4448546418122dac5feb1b35, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -325,7 +325,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_MaskInteraction: 0
   m_Sprite: {fileID: 4521503150747511572, guid: 419db4946b8a9344b806eea3717f2314, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -380,11 +380,11 @@ MonoBehaviour:
   projectile: {fileID: 4304141652958863453, guid: 654e9612b1d654d4eb07d6b8b6f33c45, type: 3}
   projectileSpawn: {fileID: 4784010795098541422}
   shooterHealth: 1
-  target: {fileID: 0}
+  target: {fileID: 5722985589488544328, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
   sightRange: 5
   targetSeen: 0
   isFacingRight: 0
-  playerControllerScript: {fileID: 0}
+  playerControllerScript: {fileID: 2978235196467081062, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
   soundControl: {fileID: 0}
 --- !u!95 &5959928542508376023
 Animator:

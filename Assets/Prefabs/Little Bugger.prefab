@@ -221,7 +221,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   enemyCheck: {fileID: 2067886230361507154}
-  playerControllerScript: {fileID: 0}
+  playerControllerScript: {fileID: 2978235196467081062, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
   soundControl: {fileID: 0}
 --- !u!95 &274204247361752453
 Animator:
