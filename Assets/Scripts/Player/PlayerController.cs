@@ -103,7 +103,6 @@ public class PlayerController : MonoBehaviour
          _rb.gravityScale = 0;
          _rb.linearVelocityY = jetForce;
          jetTimer += Time.deltaTime;
-         //soundControl.Thrusters();
       }
       else
       {
@@ -117,7 +116,6 @@ public class PlayerController : MonoBehaviour
          {
             _rb.linearVelocityY = jumpSpeed;
             jumpTimer = 0.3f;
-            //jump
          }
       }
       else
@@ -189,13 +187,9 @@ public class PlayerController : MonoBehaviour
          {
             _animator.Play("fly");
          }
-         else if (_input.jumpPressed)
-         {
-            _animator.Play("jump");
-         }
          else
          {
-            _animator.Play("idle");
+            _animator.Play("jump");
          }
       }
    }
