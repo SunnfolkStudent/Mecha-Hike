@@ -18,7 +18,10 @@ public class MainMenuController : MonoBehaviour
    public void TryAgain()
    {
       SceneManager.LoadScene(1);
-      PlayerPrefs.SetFloat("PlayerLives", 3);
+      PlayerPrefs.DeleteKey("PlayerPositionX");
+      PlayerPrefs.DeleteKey("PlayerPositionY");
+      PlayerPrefs.DeleteKey("PlayerLives");
+      PlayerPrefs.DeleteKey("Active" + gameObject.name);
    }
 
    public void MainMenu()
