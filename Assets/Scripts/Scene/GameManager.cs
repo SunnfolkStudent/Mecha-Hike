@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
                 _isGamePaused = true;
                 pauseMenu.SetActive(true);
                 Time.timeScale = 0.0f;
-                    eventSystem.SetSelectedGameObject(selected);
+                eventSystem.SetSelectedGameObject(selected);
             }
             else if (_isGamePaused)
             {

@@ -17,6 +17,7 @@ public class MainMenuController : MonoBehaviour
 
    public void MainMenu()
    {
+      Time.timeScale = 1;
       SceneManager.LoadScene(0);
    }
 
@@ -30,10 +31,5 @@ public class MainMenuController : MonoBehaviour
       pauseMenu.SetActive(false);
       settings.SetActive(true);
       eventSystem.SetSelectedGameObject(selected);
-   }
-
-   private void Update()
-   {
-      //
    }
 }
