@@ -231,7 +231,12 @@ public class PlayerController : MonoBehaviour
       if (other.CompareTag("Finish"))
       {
          SceneManager.LoadScene(3);
-         PlayerPrefs.DeleteAll();
+         PlayerPrefs.DeleteKey("PlayerPositionX");
+         PlayerPrefs.DeleteKey("PlayerPositionY");
+         PlayerPrefs.DeleteKey("PlayerLives");
+         PlayerPrefs.DeleteKey("Active" + gameObject.name);
+         
+         
       }
    }
 
