@@ -56,7 +56,7 @@ public class SoundController : MonoBehaviour
     #region Enemies
     public void Shooting()
     {
-        _audioSource.PlayOneShot(shooting);
+        _audioSource.PlayOneShot(shooting, 0.5f);
     }
 
     public void ShooterDeath()
