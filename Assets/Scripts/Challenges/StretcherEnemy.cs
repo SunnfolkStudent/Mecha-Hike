@@ -67,7 +67,7 @@ public class StretcherEnemy : MonoBehaviour
         
         if (!_isAttacking)
         {
-            if (DetectedFallOrWall() || DetectedEnemy())
+            if (DetectedWall() || DetectedEnemy() || DetectedFall())
             {
                 moveSpeed *= -1;
                 transform.localScale = new Vector2(transform.localScale.x * -1f, 1f);
@@ -143,9 +143,14 @@ public class StretcherEnemy : MonoBehaviour
         attackCooldown = 2f;
     }
 
-    private bool DetectedFallOrWall()
+    private bool DetectedWall()
     {
-        return Physics2D.OverlapCircle(wallCheck.position, 0.1f, whatIsWall) || !Physics2D.OverlapCircle(fallCheck.position,0.1f);
+        return Physics2D.OverlapCircle(wallCheck.position, 0.1f, whatIsWall);
+    }
+
+    private bool DetectedFall()
+    {
+        return !Physics2D.OverlapCircle(fallCheck.position, 0.1f, whatIsWall);
     }
     
     private bool DetectedEnemy()
