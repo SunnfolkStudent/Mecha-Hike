@@ -8,12 +8,14 @@ public class InputManager : MonoBehaviour
     public float horizontal;
     public bool jumpPressed;
     public bool jumpHeld;
+    public bool pause;
 
     private void Update()
     {
         horizontal = _inputSystem.Player.Move.ReadValue<Vector2>().x;
         jumpPressed = _inputSystem.Player.Jump.WasPressedThisFrame();
         jumpHeld = _inputSystem.Player.Jump.IsPressed();
+        pause = _inputSystem.Player.Pause.WasPressedThisFrame();
     }
 
     private void Awake()

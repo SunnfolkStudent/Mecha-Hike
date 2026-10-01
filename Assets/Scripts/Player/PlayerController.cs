@@ -53,6 +53,8 @@ public class PlayerController : MonoBehaviour
    private float _deathTime;
    private bool _isDead;
 
+   private bool _isGamePaused;
+
    private void Awake()
    {
       _enemyController = GetComponent<EnemyController>();
@@ -79,6 +81,7 @@ public class PlayerController : MonoBehaviour
 
    private void Update()
    {
+      if (Time.timeScale == 0.0f) return;
       UpdateAnimation();
       Flip();
       
