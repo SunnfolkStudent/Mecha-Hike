@@ -273,7 +273,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac83c24a16afc6446a010e981fd02946, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  target: {fileID: 0}
+  target: {fileID: 5722985589488544328, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
   sightRange: 3
   targetSeen: 0
   attackCooldown: 2
@@ -290,7 +290,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   stretcherHealth: 2
-  playerControllerScript: {fileID: 0}
+  playerControllerScript: {fileID: 2978235196467081062, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
   soundControl: {fileID: 0}
   raySpawn: {fileID: 8846511172698809643}
 --- !u!61 &9160341834334110007
