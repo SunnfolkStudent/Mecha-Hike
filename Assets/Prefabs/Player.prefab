@@ -412,6 +412,7 @@ MonoBehaviour:
   canMove: 0
   playerHealth: 6
   _damageCooldownTimer: 0
+  playerLives: 3
   isGrounded: 0
   groundCheck: {fileID: 7744334761560513598}
   whatIsGround:
