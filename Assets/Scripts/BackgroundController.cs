@@ -15,7 +15,7 @@ public class BackgroundController : MonoBehaviour
         if (cameraTransform)
         {
             _startYImage = transform.position.y;
-            _startYCamera = cameraTransform.position.y;
+            _startYCamera = 6;
         }
     }
 
