@@ -122,6 +122,21 @@ public class StretcherEnemy : MonoBehaviour
         }
     }
 
+    public void ReadyAttackSound()
+    {
+        soundControl.StretcherReady();
+    }
+
+    public void WalkingSound()
+    {
+        soundControl.StretcherWalk();
+    }
+
+    public void AttackSound()
+    {
+        soundControl.StretcherPunch();
+    }
+
     private void AttackDelay()
     {
         _isAttacking = false;

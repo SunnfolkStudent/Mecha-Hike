@@ -129,6 +129,11 @@ public class ShooterEnemy : MonoBehaviour
             }
         }
     }
+
+    public void ShootSound()
+    {
+        soundControl.Shooting();
+    }
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.yellow;

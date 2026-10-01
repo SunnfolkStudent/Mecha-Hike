@@ -3,18 +3,77 @@ using UnityEngine;
 
 public class SoundController : MonoBehaviour
 {
-    [Header("Death")]
+    [Header("Player")]
     public AudioClip playerDeath;
-    private AudioSource _audioSource;
+    public AudioClip jetPack;
+    public AudioClip playerLand;
+    public AudioClip playerWalk;
+    public AudioClip playerRoofHit;
 
+    [Header("Shooter")] 
+    public AudioClip shooting;
+
+    [Header("Stretcher")] 
+    public AudioClip stretcherWalk;
+    public AudioClip stretcherPunch;
+    public AudioClip stretcherReady;
+
+    [Header("Bugger")] 
+    public AudioClip buggerWalk;
+    public AudioClip buggerDeath;
+
+    private AudioSource _audioSource;
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
-        
+        _audioSource.volume = 0.5f;
     }
-
+    #region Player
     public void PlayerDeath()
     {
-        _audioSource.PlayOneShot(playerDeath);
+        _audioSource.PlayOneShot(playerDeath, 0.3f);
     }
+    
+
+    /*public void PlayerLand()
+    {
+        _audioSource.PlayOneShot(playerLand);
+    }
+
+    public void PlayerRoofHit()
+    {
+        _audioSource.PlayOneShot(playerRoofHit);
+    }*/
+    #endregion
+    #region Enemies
+    public void Shooting()
+    {
+        _audioSource.PlayOneShot(shooting);
+    }
+
+    public void StretcherWalk()
+    {
+        _audioSource.PlayOneShot(stretcherWalk, 0.1f);
+    }
+
+    public void StretcherPunch()
+    {
+        _audioSource.PlayOneShot(stretcherPunch);
+    }
+
+    public void StretcherReady()
+    {
+        _audioSource.PlayOneShot(stretcherReady);
+    }
+
+    public void BuggerWalk()
+    {
+        _audioSource.PlayOneShot(buggerWalk, 0.1f);
+    }
+
+    public void BuggerDeath()
+    {
+        _audioSource.PlayOneShot(buggerDeath, 0.3f);
+    }
+    #endregion
 }

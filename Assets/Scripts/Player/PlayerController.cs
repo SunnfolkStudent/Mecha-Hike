@@ -42,6 +42,7 @@ public class PlayerController : MonoBehaviour
    [Header("Sound")]
    public SoundController soundControl;
    private AudioSource _audioSource;
+   public AudioClip playerWalk;
    public AudioClip jet;
    
    private InputManager _input;
@@ -73,6 +74,7 @@ public class PlayerController : MonoBehaviour
       _audioSource =  GetComponent<AudioSource>();
       canMove = true;
       jetCoolDown = 0f;
+      _audioSource.volume = 0.1f;
    }
 
    private void Update()
@@ -91,7 +93,7 @@ public class PlayerController : MonoBehaviour
          _rb.gravityScale = 0;
          _rb.linearVelocityY = jetForce;
          jetTimer += Time.deltaTime;
-         //thrusters
+         //soundControl.Thrusters();
       }
       else
       {
@@ -135,6 +137,23 @@ public class PlayerController : MonoBehaviour
    {
       playerHealth += 1;
    }
+   
+   public void ThrusterSound()
+   {
+      _audioSource.clip = jet;
+      _audioSource.Play();
+   }
+   public void StartWalkingSound()
+   {
+      _audioSource.clip = playerWalk;
+         _audioSource.Play();
+   }
+
+   public void StopWalkingSound()
+   {
+         _audioSource.Stop();
+         Debug.Log("Stopped");
+   }
 
    private void UpdateAnimation()
    {
@@ -145,7 +164,6 @@ public class PlayerController : MonoBehaviour
          if (_input.horizontal != 0)
          {
             _animator.Play("walk");
-            //steps
          }
          else
          {

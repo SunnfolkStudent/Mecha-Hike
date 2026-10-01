@@ -1,18 +1,17 @@
 using System;
 using UnityEngine;
 
-public class LoopingSound : MonoBehaviour
+public class MusicController : MonoBehaviour
 {
-    public AudioClip windsAndRain;
+    public AudioClip backgroundMusic;
     
     private AudioSource _audioSource;
 
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
-        
-        _audioSource.clip = windsAndRain;
-        _audioSource.volume = 0.05f;
+        _audioSource.clip = backgroundMusic;
+        _audioSource.volume = 2f;
         _audioSource.Play();
     }
     

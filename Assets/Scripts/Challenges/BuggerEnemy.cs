@@ -91,6 +91,7 @@ public class BuggerEnemy : MonoBehaviour
             {
                _animator.Play("Bugger_Death");
                 _isDead = true;
+                soundControl.BuggerDeath();
             }
         }
     }
@@ -99,7 +100,11 @@ public class BuggerEnemy : MonoBehaviour
     {
         gameObject.SetActive(false);
         playerControllerScript.Healing();
-        //death
+    }
+
+    public void WalkSound()
+    {
+        soundControl.BuggerWalk();
     }
 
     private bool DetectedWall()
