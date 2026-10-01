@@ -4,7 +4,7 @@ public class ProjectileController : MonoBehaviour
 {
     public float speed;
     private Rigidbody2D _rigidbody;
-    private float _despawnTime = 1f;
+    private float _despawnTime = 5f;
     private Animator _animator;
 
     private void Awake()
@@ -24,6 +24,7 @@ public class ProjectileController : MonoBehaviour
     {
         if (collision.gameObject.layer != 7)
         {
+            Debug.Log(collision.gameObject);
             Destroy(gameObject);
         }
         
