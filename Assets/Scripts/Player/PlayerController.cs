@@ -223,8 +223,8 @@ public class PlayerController : MonoBehaviour
       if (other.CompareTag("checkpoint"))
       {
          Debug.Log("checkpoint");
-         PlayerPrefs.SetFloat("PlayerPositionX", transform.position.x);
-         PlayerPrefs.SetFloat("PlayerPositionY", transform.position.y);
+         PlayerPrefs.SetFloat("PlayerPositionX", other.transform.position.x);
+         PlayerPrefs.SetFloat("PlayerPositionY", other.transform.position.y);
          _enemyController.OnSave();
       }
 
