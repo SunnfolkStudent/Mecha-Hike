@@ -9,6 +9,7 @@ public class SoundController : MonoBehaviour
     public AudioClip playerLand;
     public AudioClip playerWalk;
     public AudioClip playerRoofHit;
+    public AudioClip playerHit;
 
     [Header("Shooter")] 
     public AudioClip shooting;
@@ -34,6 +35,11 @@ public class SoundController : MonoBehaviour
     public void PlayerDeath()
     {
         _audioSource.PlayOneShot(playerDeath);
+    }
+
+    public void PlayerHit()
+    {
+        _audioSource.PlayOneShot(playerHit);
     }
     
 

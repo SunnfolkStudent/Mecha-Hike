@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
@@ -6,6 +7,8 @@ public class GameManager : MonoBehaviour
     private bool _isGamePaused;
     public GameObject pauseMenu;
     public GameObject settings;
+    public EventSystem eventSystem;
+    public GameObject selected;
 
     private void Start()
     {
@@ -22,6 +25,7 @@ public class GameManager : MonoBehaviour
                 _isGamePaused = true;
                 pauseMenu.SetActive(true);
                 Time.timeScale = 0.0f;
+                    eventSystem.SetSelectedGameObject(selected);
             }
             else if (_isGamePaused)
             {
