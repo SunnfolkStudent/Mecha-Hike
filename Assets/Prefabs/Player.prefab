@@ -278,13 +278,13 @@ GameObject:
   - component: {fileID: 4817729845142042148}
   - component: {fileID: 2003174104354644616}
   - component: {fileID: 3688730968104881425}
-  - component: {fileID: 835685651781716949}
   - component: {fileID: 2083922318661473098}
-  - component: {fileID: 3020066320278494066}
+  - component: {fileID: 6760765436950663982}
+  - component: {fileID: 4257175641999638551}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 3936346786652291628, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
@@ -354,7 +354,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 5
   m_MaskInteraction: 0
   m_Sprite: {fileID: -8414437831142259376, guid: 25865c4ef8b942a478683e3fecf33799, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -418,11 +418,11 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
-  groundBoxSize: {x: 0.8, y: 0.2}
+  groundBoxSize: {x: 0.6, y: 0.2}
   wallCheck: {fileID: 4614931350429308}
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 64
   wallCheckSize: {x: 0.8, y: 0.2}
   jumpTimer: 0
   jetTimer: 0
@@ -449,6 +449,7 @@ MonoBehaviour:
   jumpPressed: 0
   jumpHeld: 0
   pause: 0
+  submit: 0
 --- !u!95 &718093645300946516
 Animator:
   serializedVersion: 7
@@ -992,19 +993,6 @@ CompositeCollider2D:
   m_OffsetDistance: 0.00005
   m_UseDelaunayMesh: 0
   m_CompositeGameObject: {fileID: 8799882428580803376}
---- !u!114 &835685651781716949
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8799882428580803376}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc99e0ece61a7473ab92c385bd9c4b38, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
-  enemies: []
 --- !u!82 &2083922318661473098
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1102,7 +1090,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &3020066320278494066
+--- !u!114 &6760765436950663982
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8799882428580803376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc99e0ece61a7473ab92c385bd9c4b38, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EnemyController
+  enemies: []
+--- !u!114 &4257175641999638551
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
