@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
-public class MainMenuController : MonoBehaviour
+public class ButtonController : MonoBehaviour
 {
    public GameObject settings;
    public GameObject pauseMenu;
