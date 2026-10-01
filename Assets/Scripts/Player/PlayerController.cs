@@ -252,6 +252,10 @@ public class PlayerController : MonoBehaviour
       {
          Debug.Log("RestartLives");
          SceneManager.LoadScene(2);
+         PlayerPrefs.DeleteKey("PlayerPositionX");
+         PlayerPrefs.DeleteKey("PlayerPositionY");
+         PlayerPrefs.DeleteKey("PlayerLives");
+         PlayerPrefs.DeleteKey("Active" + gameObject.name);
       }
    }
 

@@ -92,7 +92,7 @@ public class SoundController : MonoBehaviour
 
     public void BuggerDeath()
     {
-        _audioSource.PlayOneShot(buggerDeath);
+        _audioSource.PlayOneShot(buggerDeath, 0.5f);
     }
     #endregion
 }

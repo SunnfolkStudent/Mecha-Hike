@@ -179,6 +179,10 @@ PrefabInstance:
       propertyPath: soundControl
       value: 
       objectReference: {fileID: 434459103}
+    - target: {fileID: 6368912708999402391, guid: 133fc94820b427a46aaa408290bb8ebd, type: 3}
+      propertyPath: playerControllerScript
+      value: 
+      objectReference: {fileID: 1660522997}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -354,6 +358,10 @@ PrefabInstance:
       propertyPath: soundControl
       value: 
       objectReference: {fileID: 434459103}
+    - target: {fileID: 1876702097462665362, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
+      propertyPath: playerControllerScript
+      value: 
+      objectReference: {fileID: 1660522997}
     - target: {fileID: 3597546402224390205, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
       propertyPath: m_LocalPosition.x
       value: 66.14003
@@ -4027,6 +4035,10 @@ PrefabInstance:
       propertyPath: soundControl
       value: 
       objectReference: {fileID: 434459103}
+    - target: {fileID: 1876702097462665362, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
+      propertyPath: playerControllerScript
+      value: 
+      objectReference: {fileID: 1660522997}
     - target: {fileID: 3597546402224390205, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
       propertyPath: m_LocalPosition.x
       value: 55.97889
@@ -4918,6 +4930,14 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 1660522968}
+    - target: {fileID: 6368912708999402391, guid: 133fc94820b427a46aaa408290bb8ebd, type: 3}
+      propertyPath: soundControl
+      value: 
+      objectReference: {fileID: 434459103}
+    - target: {fileID: 6368912708999402391, guid: 133fc94820b427a46aaa408290bb8ebd, type: 3}
+      propertyPath: playerControllerScript
+      value: 
+      objectReference: {fileID: 1660522997}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -5602,6 +5622,10 @@ PrefabInstance:
       propertyPath: soundControl
       value: 
       objectReference: {fileID: 434459103}
+    - target: {fileID: 1876702097462665362, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
+      propertyPath: playerControllerScript
+      value: 
+      objectReference: {fileID: 1660522997}
     - target: {fileID: 3597546402224390205, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
       propertyPath: m_LocalPosition.x
       value: -60.50822
@@ -5940,6 +5964,10 @@ PrefabInstance:
       propertyPath: soundControl
       value: 
       objectReference: {fileID: 434459103}
+    - target: {fileID: 8243469658908181265, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
+      propertyPath: playerControllerScript
+      value: 
+      objectReference: {fileID: 1660522997}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -36409,6 +36437,10 @@ PrefabInstance:
       propertyPath: soundControl
       value: 
       objectReference: {fileID: 434459103}
+    - target: {fileID: 1876702097462665362, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
+      propertyPath: playerControllerScript
+      value: 
+      objectReference: {fileID: 1660522997}
     - target: {fileID: 3597546402224390205, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
       propertyPath: m_LocalPosition.x
       value: -38.308487
@@ -115711,6 +115743,14 @@ PrefabInstance:
       propertyPath: sightRange
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 8243469658908181265, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
+      propertyPath: soundControl
+      value: 
+      objectReference: {fileID: 434459103}
+    - target: {fileID: 8243469658908181265, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
+      propertyPath: playerControllerScript
+      value: 
+      objectReference: {fileID: 1660522997}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -115724,6 +115764,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1876702097462665362, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
+      propertyPath: soundControl
+      value: 
+      objectReference: {fileID: 434459103}
+    - target: {fileID: 1876702097462665362, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
+      propertyPath: playerControllerScript
+      value: 
+      objectReference: {fileID: 1660522997}
     - target: {fileID: 3597546402224390205, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
       propertyPath: m_LocalPosition.x
       value: -68.89793
@@ -115908,9 +115956,17 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 8243469658908181265, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
+      propertyPath: soundControl
+      value: 
+      objectReference: {fileID: 434459103}
+    - target: {fileID: 8243469658908181265, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
       propertyPath: isFacingRight
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8243469658908181265, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
+      propertyPath: playerControllerScript
+      value: 
+      objectReference: {fileID: 1660522997}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -116483,6 +116539,10 @@ PrefabInstance:
       propertyPath: soundControl
       value: 
       objectReference: {fileID: 434459103}
+    - target: {fileID: 1876702097462665362, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
+      propertyPath: playerControllerScript
+      value: 
+      objectReference: {fileID: 1660522997}
     - target: {fileID: 3597546402224390205, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
       propertyPath: m_LocalPosition.x
       value: -60.29816
@@ -118026,6 +118086,10 @@ PrefabInstance:
       propertyPath: soundControl
       value: 
       objectReference: {fileID: 434459103}
+    - target: {fileID: 1876702097462665362, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
+      propertyPath: playerControllerScript
+      value: 
+      objectReference: {fileID: 1660522997}
     - target: {fileID: 3597546402224390205, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
       propertyPath: m_LocalPosition.x
       value: 32.308167
@@ -118213,6 +118277,10 @@ PrefabInstance:
       propertyPath: soundControl
       value: 
       objectReference: {fileID: 434459103}
+    - target: {fileID: 1876702097462665362, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
+      propertyPath: playerControllerScript
+      value: 
+      objectReference: {fileID: 1660522997}
     - target: {fileID: 3597546402224390205, guid: 92919c0a18cf38846826e9c1a5d73a60, type: 3}
       propertyPath: m_LocalPosition.x
       value: 64.09748
