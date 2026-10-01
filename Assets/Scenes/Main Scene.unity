@@ -4067,7 +4067,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &330046107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4575,7 +4575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SoundController
   playerDeath: {fileID: 8300000, guid: 1b72905586ded6c4c912d3097202b67d, type: 3}
-  jetPack: {fileID: 8300000, guid: b66dd8b08e8bb0a44a65eba4cb66460d, type: 3}
+  jetPack: {fileID: 8300000, guid: 97ec2f5116d4037428022c4ba0813d21, type: 3}
   playerLand: {fileID: 8300000, guid: 89520c2eeb56a6c4a9f195b6966f1e6a, type: 3}
   playerWalk: {fileID: 8300000, guid: 3d01d01986757a848ab0f4688d442180, type: 3}
   playerRoofHit: {fileID: 8300000, guid: 541181af6e3f07e4f80c9794ce8c3e5d, type: 3}
