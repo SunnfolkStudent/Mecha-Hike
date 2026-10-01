@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9a56363e5755deb4f9ad2c063fdbc4cc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MainMenuMusic
-  backgroundMusic: {fileID: 0}
+  backgroundMusic: {fileID: 8300000, guid: 19b34e51b1f12834583878dae43ab9d8, type: 3}
 --- !u!82 &2034263229
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1104,7 +1104,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
