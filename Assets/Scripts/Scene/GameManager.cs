@@ -1,10 +1,12 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     private InputManager _input;
     private bool _isGamePaused;
+    public PlayerController player;
     public GameObject pauseMenu;
     public GameObject settings;
     public EventSystem eventSystem;

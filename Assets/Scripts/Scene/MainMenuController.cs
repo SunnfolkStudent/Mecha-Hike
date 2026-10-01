@@ -15,6 +15,12 @@ public class MainMenuController : MonoBehaviour
       SceneManager.LoadScene(1);
    }
 
+   public void TryAgain()
+   {
+      SceneManager.LoadScene(1);
+      PlayerPrefs.SetFloat("PlayerLives", 3);
+   }
+
    public void MainMenu()
    {
       Time.timeScale = 1;

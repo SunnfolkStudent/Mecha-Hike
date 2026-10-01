@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
    public float playerHealth = 6;
    public float _damageCooldownTimer;
    private float _damageCooldown = 1f;
+   public float playerLives = 3f;
 
    [Header("Ground Check")]
    public bool isGrounded;
@@ -63,6 +64,12 @@ public class PlayerController : MonoBehaviour
          PlayerPrefs.SetFloat("PlayerPositionX", transform.position.x);
          PlayerPrefs.SetFloat("PlayerPositionY", transform.position.y);
       }
+
+      if (!PlayerPrefs.HasKey("PlayerLives"))
+      {
+         PlayerPrefs.SetFloat("PlayerLives", playerLives);
+      }
+      playerLives =  PlayerPrefs.GetFloat("PlayerLives");
       
       transform.position = new Vector2(PlayerPrefs.GetFloat("PlayerPositionX"), 
          PlayerPrefs.GetFloat("PlayerPositionY"));
@@ -96,7 +103,6 @@ public class PlayerController : MonoBehaviour
          _rb.gravityScale = 0;
          _rb.linearVelocityY = jetForce;
          jetTimer += Time.deltaTime;
-         //soundControl.Thrusters();
       }
       else
       {
@@ -110,7 +116,6 @@ public class PlayerController : MonoBehaviour
          {
             _rb.linearVelocityY = jumpSpeed;
             jumpTimer = 0.3f;
-            //jump
          }
       }
       else
@@ -182,13 +187,9 @@ public class PlayerController : MonoBehaviour
          {
             _animator.Play("fly");
          }
-         else if (_input.jumpPressed)
-         {
-            _animator.Play("jump");
-         }
          else
          {
-            _animator.Play("idle");
+            _animator.Play("jump");
          }
       }
    }
@@ -231,7 +232,16 @@ public class PlayerController : MonoBehaviour
    private void RestartScene()
    {
       Debug.Log("Restart");
-      SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+      if (playerLives > 0)
+      {
+         Debug.Log("RestartHealth");
+         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+      }
+      else
+      {
+         Debug.Log("RestartLives");
+         SceneManager.LoadScene(2);
+      }
    }
 
    public void TakeDamage(string enemyTag)
@@ -263,11 +273,24 @@ public class PlayerController : MonoBehaviour
          soundControl.PlayerHit();
       }
 
-      if (playerHealth <= 0 && !_isDead)
+      if (playerLives <= 0 && !_isDead && playerHealth <= 0)
       {
          _isDead = true;
          canMove = false;
          _rb.linearVelocityX = 0;
+         PlayerPrefs.SetFloat("PlayerPositionX", 1.5f);
+         PlayerPrefs.SetFloat("PlayerPositionY", -1.5f);
+         _animator.Play("death2");
+         Debug.Log("oh nooo");
+      }
+
+      else if (playerLives > 0 && playerHealth <= 0 && !_isDead)
+      {
+         _isDead = true;
+         canMove = false;
+         _rb.linearVelocityX = 0;
+         playerLives -= 1;
+         PlayerPrefs.SetFloat("PlayerLives", playerLives);
          Debug.Log("0Health");
          _animator.Play("death2");
          soundControl.PlayerDeath();
