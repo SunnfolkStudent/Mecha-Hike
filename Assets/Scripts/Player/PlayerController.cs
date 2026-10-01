@@ -227,6 +227,11 @@ public class PlayerController : MonoBehaviour
          PlayerPrefs.SetFloat("PlayerPositionY", transform.position.y);
          _enemyController.OnSave();
       }
+
+      if (other.CompareTag("Finish"))
+      {
+         SceneManager.LoadScene(3);
+      }
    }
 
    private void RestartScene()
