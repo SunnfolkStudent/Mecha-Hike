@@ -289,7 +289,7 @@ MonoBehaviour:
   whatIsEnemy:
     serializedVersion: 2
     m_Bits: 128
-  stretcherHealth: 2
+  stretcherHealth: 3
   playerControllerScript: {fileID: 2978235196467081062, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
   soundControl: {fileID: 0}
   raySpawn: {fileID: 8846511172698809643}
