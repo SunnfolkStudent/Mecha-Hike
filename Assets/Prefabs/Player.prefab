@@ -280,6 +280,7 @@ GameObject:
   - component: {fileID: 3688730968104881425}
   - component: {fileID: 835685651781716949}
   - component: {fileID: 2083922318661473098}
+  - component: {fileID: 3020066320278494066}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -446,6 +447,7 @@ MonoBehaviour:
   horizontal: 0
   jumpPressed: 0
   jumpHeld: 0
+  pause: 0
 --- !u!95 &718093645300946516
 Animator:
   serializedVersion: 7
@@ -1099,3 +1101,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &3020066320278494066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8799882428580803376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29d1c529b989eb84893ea54c61cfcfad, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  player: {fileID: 0}
+  pauseMenu: {fileID: 0}
+  settings: {fileID: 0}
+  eventSystem: {fileID: 0}
+  selected: {fileID: 0}
