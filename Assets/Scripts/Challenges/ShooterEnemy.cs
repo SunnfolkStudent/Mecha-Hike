@@ -52,13 +52,6 @@ public class ShooterEnemy : MonoBehaviour
         
         //makes projectileSpawn rotate towards player
         _angle = Mathf.Atan2(target.position.y - projectileSpawn.position.y, target.position.x - projectileSpawn.position.x) * Mathf.Rad2Deg;
-        //projectileSpawn.rotation = Quaternion.Euler(0f, 0f, _angle);
-        
-        //keeps projectileSpawn in a radius around the enemy while it's moving
-       /* Vector2 allowedPos = target.position - transform.position;
-        allowedPos = Vector2.ClampMagnitude(allowedPos, 0.5f);
-
-        projectileSpawn.position = _enemyCenter + allowedPos;*/
         
         transform.localRotation = Quaternion.Euler(0f, 0f, _angle);
         
@@ -71,12 +64,12 @@ public class ShooterEnemy : MonoBehaviour
             targetSeen = false;
         }
         
-        if (_shootTimer > 2 && targetSeen)
+        if (_shootTimer >= 3 && targetSeen)
         {
             if (_isDead) return;
             if (Time.time <= _damageCooldownTimer) return;
-            _animator.Play("shooter_attack");
             _shootTimer = 0;
+            _animator.SetTrigger("shoot");
         }
     }
 
