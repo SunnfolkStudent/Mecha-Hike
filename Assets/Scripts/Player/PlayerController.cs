@@ -231,6 +231,7 @@ public class PlayerController : MonoBehaviour
       if (other.CompareTag("Finish"))
       {
          SceneManager.LoadScene(3);
+         PlayerPrefs.DeleteAll();
       }
    }
 
