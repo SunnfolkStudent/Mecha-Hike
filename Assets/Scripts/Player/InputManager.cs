@@ -9,6 +9,7 @@ public class InputManager : MonoBehaviour
     public bool jumpPressed;
     public bool jumpHeld;
     public bool pause;
+    public bool submit;
 
     private void Update()
     {
@@ -16,6 +17,7 @@ public class InputManager : MonoBehaviour
         jumpPressed = _inputSystem.Player.Jump.WasPressedThisFrame();
         jumpHeld = _inputSystem.Player.Jump.IsPressed();
         pause = _inputSystem.Player.Pause.WasPressedThisFrame();
+        submit = _inputSystem.UI.Submit.WasPressedThisFrame();
     }
 
     private void Awake()
