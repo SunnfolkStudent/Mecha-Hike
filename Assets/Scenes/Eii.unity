@@ -5984,9 +5984,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 33266208209521786, guid: 133fc94820b427a46aaa408290bb8ebd, type: 3}
+      propertyPath: m_ColliderPaths.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3308369944905495686, guid: 133fc94820b427a46aaa408290bb8ebd, type: 3}
       propertyPath: m_Name
       value: Stretcher_Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308369944905495686, guid: 133fc94820b427a46aaa408290bb8ebd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5955828559927983937, guid: 133fc94820b427a46aaa408290bb8ebd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6055,11 +6063,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 503209690219538987, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.192
+      value: 6.784
       objectReference: {fileID: 0}
     - target: {fileID: 503209690219538987, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.54
+      value: -0.52
       objectReference: {fileID: 0}
     - target: {fileID: 503209690219538987, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6093,13 +6101,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3965628334011736155, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4784010795098541422, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.724
+      objectReference: {fileID: 0}
     - target: {fileID: 7466280918430529567, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
       propertyPath: m_Name
       value: Shooter Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 7466280918430529567, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8243469658908181265, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
       propertyPath: target
