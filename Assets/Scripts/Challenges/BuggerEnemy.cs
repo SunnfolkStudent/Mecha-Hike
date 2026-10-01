@@ -102,10 +102,10 @@ public class BuggerEnemy : MonoBehaviour
         playerControllerScript.Healing();
     }
 
-    public void WalkSound()
+   /* public void WalkSound()
     {
         soundControl.BuggerWalk();
-    }
+    }*/
 
     private bool DetectedWall()
     {

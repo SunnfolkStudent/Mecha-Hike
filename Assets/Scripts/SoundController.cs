@@ -64,10 +64,10 @@ public class SoundController : MonoBehaviour
         _audioSource.PlayOneShot(shooterDeath);
     }
 
-    public void StretcherWalk()
+   /* public void StretcherWalk()
     {
         _audioSource.PlayOneShot(stretcherWalk, 0.1f);
-    }
+    }*/
 
     public void StretcherPunch()
     {
@@ -85,10 +85,10 @@ public class SoundController : MonoBehaviour
         Debug.Log("stretcher death");
     }
 
-    public void BuggerWalk()
+    /*public void BuggerWalk()
     {
         _audioSource.PlayOneShot(buggerWalk, 0.1f);
-    }
+    }*/
 
     public void BuggerDeath()
     {

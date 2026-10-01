@@ -127,10 +127,10 @@ public class StretcherEnemy : MonoBehaviour
         soundControl.StretcherReady();
     }
 
-    public void WalkingSound()
+   /* public void WalkingSound()
     {
         soundControl.StretcherWalk();
-    }
+    }*/
 
     public void AttackSound()
     {
