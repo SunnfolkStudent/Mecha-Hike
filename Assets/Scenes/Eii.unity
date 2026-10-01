@@ -1961,9 +1961,11 @@ MonoBehaviour:
   playerWalk: {fileID: 8300000, guid: 3d01d01986757a848ab0f4688d442180, type: 3}
   playerRoofHit: {fileID: 8300000, guid: 541181af6e3f07e4f80c9794ce8c3e5d, type: 3}
   shooting: {fileID: 8300000, guid: 6b5eb0019a310b942878988304b255b9, type: 3}
+  shooterDeath: {fileID: 8300000, guid: d194daef3768a26448594f4cb9bcd3bf, type: 3}
   stretcherWalk: {fileID: 8300000, guid: 91136b480424cba468a0a894117c4d9b, type: 3}
   stretcherPunch: {fileID: 8300000, guid: aff736e7e0a4f214190647b6567c5e71, type: 3}
   stretcherReady: {fileID: 8300000, guid: 9fec145342d9fe0489c8b898ef07efdf, type: 3}
+  stretcherDeath: {fileID: 8300000, guid: c0de1b164af689141a7474f30b875fe2, type: 3}
   buggerWalk: {fileID: 8300000, guid: 6aa99cff1368c2c4fbb21a238655dfc7, type: 3}
   buggerDeath: {fileID: 8300000, guid: 83851a530569f984ab774da2666cda6c, type: 3}
 --- !u!1001 &1790019561
@@ -2249,7 +2251,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2055893865
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2397,11 +2399,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5955828559927983937, guid: 133fc94820b427a46aaa408290bb8ebd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.12
+      value: 4.95
       objectReference: {fileID: 0}
     - target: {fileID: 5955828559927983937, guid: 133fc94820b427a46aaa408290bb8ebd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.97
+      value: -0.89
       objectReference: {fileID: 0}
     - target: {fileID: 5955828559927983937, guid: 133fc94820b427a46aaa408290bb8ebd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2435,10 +2437,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 6368912708999402391, guid: 133fc94820b427a46aaa408290bb8ebd, type: 3}
-      propertyPath: death
-      value: 
-      objectReference: {fileID: 8300000, guid: aff736e7e0a4f214190647b6567c5e71, type: 3}
     - target: {fileID: 6368912708999402391, guid: 133fc94820b427a46aaa408290bb8ebd, type: 3}
       propertyPath: target
       value: 
@@ -2507,10 +2505,6 @@ PrefabInstance:
     - target: {fileID: 7466280918430529567, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
       propertyPath: m_Name
       value: Shooter Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 7466280918430529567, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
-      propertyPath: m_IsActive
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8243469658908181265, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
       propertyPath: target

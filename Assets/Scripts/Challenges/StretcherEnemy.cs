@@ -169,8 +169,8 @@ public class StretcherEnemy : MonoBehaviour
             {
                 _isDead = true;
                 _rb.linearVelocityX = 0;
-                //death
                _animator.Play("stretcher_death");
+               soundControl.StretcherDeath();
             }
         }
     }

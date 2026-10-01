@@ -12,11 +12,13 @@ public class SoundController : MonoBehaviour
 
     [Header("Shooter")] 
     public AudioClip shooting;
+    public AudioClip shooterDeath;
 
     [Header("Stretcher")] 
     public AudioClip stretcherWalk;
     public AudioClip stretcherPunch;
     public AudioClip stretcherReady;
+    public AudioClip stretcherDeath;
 
     [Header("Bugger")] 
     public AudioClip buggerWalk;
@@ -31,7 +33,7 @@ public class SoundController : MonoBehaviour
     #region Player
     public void PlayerDeath()
     {
-        _audioSource.PlayOneShot(playerDeath, 0.3f);
+        _audioSource.PlayOneShot(playerDeath);
     }
     
 
@@ -51,6 +53,11 @@ public class SoundController : MonoBehaviour
         _audioSource.PlayOneShot(shooting);
     }
 
+    public void ShooterDeath()
+    {
+        _audioSource.PlayOneShot(shooterDeath);
+    }
+
     public void StretcherWalk()
     {
         _audioSource.PlayOneShot(stretcherWalk, 0.1f);
@@ -66,6 +73,12 @@ public class SoundController : MonoBehaviour
         _audioSource.PlayOneShot(stretcherReady);
     }
 
+    public void StretcherDeath()
+    {
+        _audioSource.PlayOneShot(stretcherDeath);
+        Debug.Log("stretcher death");
+    }
+
     public void BuggerWalk()
     {
         _audioSource.PlayOneShot(buggerWalk, 0.1f);
@@ -73,7 +86,7 @@ public class SoundController : MonoBehaviour
 
     public void BuggerDeath()
     {
-        _audioSource.PlayOneShot(buggerDeath, 0.3f);
+        _audioSource.PlayOneShot(buggerDeath);
     }
     #endregion
 }
