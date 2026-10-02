@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
    public float jetTimer;
    public float jetExhaust;
    public float jetCoolDown;
+   public bool jetUsed = false;
 
    [Header("Jet functions")]
    public Transform thrusters;
@@ -97,6 +98,7 @@ public class PlayerController : MonoBehaviour
       jetCoolDown -= Time.deltaTime;
       
       isGrounded = Physics2D.OverlapBox(groundCheck.position, groundBoxSize, 0f, whatIsGround);
+      
       if (_input.jumpHeld && jumpTimer <= 0 && jetCoolDown <= 0)
       { 
          thrusters.gameObject.SetActive(true);
@@ -108,6 +110,12 @@ public class PlayerController : MonoBehaviour
       {
          thrusters.gameObject.SetActive(false);
       }
+
+      if (_input.jumpReleased && jetTimer> 0.1f)
+      {
+         jetTimer += 0.1f;
+      }
+
       if (isGrounded)
       {
          jetCoolDown = 0;

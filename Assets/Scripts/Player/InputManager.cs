@@ -7,6 +7,7 @@ public class InputManager : MonoBehaviour
     
     public float horizontal;
     public bool jumpPressed;
+    public bool jumpReleased;
     public bool jumpHeld;
     public bool pause;
     public bool submit;
@@ -15,6 +16,7 @@ public class InputManager : MonoBehaviour
     {
         horizontal = _inputSystem.Player.Move.ReadValue<Vector2>().x;
         jumpPressed = _inputSystem.Player.Jump.WasPressedThisFrame();
+        jumpReleased = _inputSystem.Player.Jump.WasReleasedThisFrame();
         jumpHeld = _inputSystem.Player.Jump.IsPressed();
         pause = _inputSystem.Player.Pause.WasPressedThisFrame();
         submit = _inputSystem.UI.Submit.WasPressedThisFrame();
