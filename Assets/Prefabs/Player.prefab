@@ -426,8 +426,9 @@ MonoBehaviour:
   wallCheckSize: {x: 0.8, y: 0.2}
   jumpTimer: 0
   jetTimer: 0
-  jetExhaust: 1
+  jetExhaust: 1.2
   jetCoolDown: 10
+  jetUsed: 0
   thrusters: {fileID: 2249777569595082994}
   isFacingRight: 0
   soundControl: {fileID: 0}
@@ -447,6 +448,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::InputManager
   horizontal: 0
   jumpPressed: 0
+  jumpReleased: 0
   jumpHeld: 0
   pause: 0
   submit: 0
