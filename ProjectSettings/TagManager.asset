@@ -48,6 +48,15 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: BG
+    uniqueID: 1658707229
+    locked: 0
+  - name: MG
+    uniqueID: 2187791357
+    locked: 0
+  - name: FG
+    uniqueID: 1256489281
+    locked: 0
   m_RenderingLayers:
   - Default
   m_MigratedRenderPipelines: []
