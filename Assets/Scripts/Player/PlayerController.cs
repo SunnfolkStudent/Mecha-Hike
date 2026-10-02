@@ -171,7 +171,7 @@ public class PlayerController : MonoBehaviour
    public void StopWalkingSound()
    {
          _audioSource.Stop();
-         Debug.Log("Stopped");
+         //Debug.Log("Stopped");
    }
 
    private void UpdateAnimation()
@@ -207,7 +207,7 @@ public class PlayerController : MonoBehaviour
       if (other.gameObject.layer == 7)
       {
          TakeDamage(other.gameObject.tag);
-         Debug.Log("Damaged");
+         //Debug.Log("Damaged");
       }
 
       if (other.gameObject.CompareTag("Slime"))
@@ -230,7 +230,7 @@ public class PlayerController : MonoBehaviour
    {
       if (other.CompareTag("checkpoint"))
       {
-         Debug.Log("checkpoint");
+         //Debug.Log("checkpoint");
          PlayerPrefs.SetFloat("PlayerPositionX", other.transform.position.x);
          PlayerPrefs.SetFloat("PlayerPositionY", other.transform.position.y);
          _enemyController.OnSave();
@@ -250,15 +250,15 @@ public class PlayerController : MonoBehaviour
 
    private void RestartScene()
    {
-      Debug.Log("Restart");
+      //Debug.Log("Restart");
       if (playerLives > 0)
       {
-         Debug.Log("RestartHealth");
+         //Debug.Log("RestartHealth");
          SceneManager.LoadScene(SceneManager.GetActiveScene().name);
       }
       else
       {
-         Debug.Log("RestartLives");
+         //Debug.Log("RestartLives");
          SceneManager.LoadScene(2);
          PlayerPrefs.DeleteKey("PlayerPositionX");
          PlayerPrefs.DeleteKey("PlayerPositionY");
@@ -274,13 +274,13 @@ public class PlayerController : MonoBehaviour
          if (enemyTag == "LowDamage" || enemyTag == "Slime")
          {
             playerHealth -= 1f;
-            Debug.Log("LowDamage/Slime");
+            //Debug.Log("LowDamage/Slime");
          }
 
          if (enemyTag == "MediumDamage")
          {
             playerHealth -= 2f;
-            Debug.Log("MediumDamage");
+            //Debug.Log("MediumDamage");
          }
 
          if (enemyTag == "HighDamage")
@@ -288,7 +288,7 @@ public class PlayerController : MonoBehaviour
             playerHealth -= 3f;
          }
          _damageCooldownTimer = Time.time + _damageCooldown;
-         Debug.Log("TakeDamage");
+         //Debug.Log("TakeDamage");
          
          if (_isDead) return;
          _deathTime = Time.time + 0.5f;
@@ -304,7 +304,7 @@ public class PlayerController : MonoBehaviour
          PlayerPrefs.SetFloat("PlayerPositionX", 1.5f);
          PlayerPrefs.SetFloat("PlayerPositionY", -1.5f);
          _animator.Play("death2");
-         Debug.Log("oh nooo");
+         //Debug.Log("oh nooo");
       }
 
       else if (playerLives > 0 && playerHealth <= 0 && !_isDead)
@@ -314,7 +314,7 @@ public class PlayerController : MonoBehaviour
          _rb.linearVelocityX = 0;
          playerLives -= 1;
          PlayerPrefs.SetFloat("PlayerLives", playerLives);
-         Debug.Log("0Health");
+         //Debug.Log("0Health");
          _animator.Play("death2");
          soundControl.PlayerDeath();
       }
@@ -322,16 +322,16 @@ public class PlayerController : MonoBehaviour
    
    private void Flip()
    {
-      Debug.Log("Flip");
+      //Debug.Log("Flip");
          if (_input.horizontal > 0)
          {
             _directionFacing = 1;
-            Debug.Log("directionFacing 1");
+            //Debug.Log("directionFacing 1");
          }
          else if (_input.horizontal < 0)
          {
             _directionFacing = -1;
-            Debug.Log("directionFacing -1");
+            //Debug.Log("directionFacing -1");
          }
          
          isFacingRight = _input.horizontal > 0;
@@ -339,7 +339,7 @@ public class PlayerController : MonoBehaviour
          if (_input.horizontal != 0 && transform.localScale.x != _directionFacing)
          {
             transform.localScale = new Vector3(_directionFacing, transform.localScale.y, transform.localScale.z);
-            Debug.Log("Flipping");
+            //Debug.Log("Flipping");
          }
    }
 
