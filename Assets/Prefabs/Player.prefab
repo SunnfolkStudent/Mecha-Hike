@@ -418,7 +418,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 8
-  groundBoxSize: {x: 0.6, y: 0.2}
+  groundBoxSize: {x: 0.5, y: 0.2}
   wallCheck: {fileID: 4614931350429308}
   whatIsWall:
     serializedVersion: 2
