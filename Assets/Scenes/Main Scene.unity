@@ -180195,7 +180195,7 @@ PrefabInstance:
       objectReference: {fileID: 434459103}
     - target: {fileID: 2978235196467081062, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
       propertyPath: groundBoxSize.x
-      value: 0.6
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 2978235196467081062, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
       propertyPath: groundBoxSize.y
