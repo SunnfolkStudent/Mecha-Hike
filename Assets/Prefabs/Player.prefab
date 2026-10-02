@@ -406,7 +406,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64a2ddf6132327a4aa1e577393c79406, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::PlayerController
-  moveSpeed: 10
+  moveSpeed: 5
   jumpSpeed: 9
   jetForce: 5
   canMove: 0
@@ -427,7 +427,7 @@ MonoBehaviour:
   jumpTimer: 0
   jetTimer: 0
   jetExhaust: 1
-  jetCoolDown: 5
+  jetCoolDown: 10
   thrusters: {fileID: 2249777569595082994}
   isFacingRight: 0
   soundControl: {fileID: 0}

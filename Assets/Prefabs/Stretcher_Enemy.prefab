@@ -274,7 +274,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   target: {fileID: 5722985589488544328, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
-  sightRange: 3
+  sightRange: 2
   targetSeen: 0
   attackCooldown: 2
   _isAttacking: 0
