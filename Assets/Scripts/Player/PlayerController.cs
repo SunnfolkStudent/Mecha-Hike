@@ -99,7 +99,7 @@ public class PlayerController : MonoBehaviour
       
       isGrounded = Physics2D.OverlapBox(groundCheck.position, groundBoxSize, 0f, whatIsGround);
       
-      if (_input.jumpHeld && jumpTimer <= 0 && jetCoolDown <= 0)
+      if (_input.jumpHeld && jumpTimer <= 0 && jetCoolDown <= 0 && !_isDead)
       { 
          thrusters.gameObject.SetActive(true);
          _rb.gravityScale = 0;
@@ -113,13 +113,16 @@ public class PlayerController : MonoBehaviour
 
       if (_input.jumpReleased && jetTimer> 0.1f)
       {
-         jetTimer += 0.1f;
+         jetTimer += 0.15f;
       }
 
-      if (isGrounded)
+      if (isGrounded && !_isDead)
       {
+         if (_input.jumpPressed)
+         {
          jetCoolDown = 0;
          jetTimer = 0;
+         }
          if (_input.jumpPressed)
          {
             _rb.linearVelocityY = jumpSpeed;

@@ -414,6 +414,10 @@ MonoBehaviour:
   _damageCooldownTimer: 0
   playerLives: 3
   isGrounded: 0
+  onEnemy: 0
+  whatIsEnemy:
+    serializedVersion: 2
+    m_Bits: 128
   groundCheck: {fileID: 7744334761560513598}
   whatIsGround:
     serializedVersion: 2
@@ -426,7 +430,7 @@ MonoBehaviour:
   wallCheckSize: {x: 0.8, y: 0.2}
   jumpTimer: 0
   jetTimer: 0
-  jetExhaust: 1.2
+  jetExhaust: 1.4
   jetCoolDown: 10
   jetUsed: 0
   thrusters: {fileID: 2249777569595082994}
