@@ -19,7 +19,7 @@ public class PlayerController : MonoBehaviour
    public bool isGrounded;
    public Transform groundCheck;
    public LayerMask whatIsGround;
-   public Vector2 groundBoxSize =  new Vector2(0.8f, 0.2f);
+   public Vector2 groundBoxSize = new Vector2(0.8f, 0.2f);
    
    [Header("Wall Check")]
    public Transform wallCheck;
@@ -113,7 +113,7 @@ public class PlayerController : MonoBehaviour
 
       if (_input.jumpReleased && jetTimer> 0.1f)
       {
-         jetTimer += 0.15f;
+         jetTimer += 0.3f;
       }
 
       if (isGrounded && !_isDead)
