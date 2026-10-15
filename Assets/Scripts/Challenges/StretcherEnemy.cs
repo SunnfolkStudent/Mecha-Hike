@@ -127,11 +127,6 @@ public class StretcherEnemy : MonoBehaviour
         soundControl.StretcherReady();
     }
 
-   /* public void WalkingSound()
-    {
-        soundControl.StretcherWalk();
-    }*/
-
     public void AttackSound()
     {
         soundControl.StretcherPunch();
@@ -140,7 +135,7 @@ public class StretcherEnemy : MonoBehaviour
     private void AttackDelay()
     {
         _isAttacking = false;
-        attackCooldown = 2f;
+        attackCooldown = 1.5f;
     }
 
     private bool DetectedWall()
@@ -162,6 +157,8 @@ public class StretcherEnemy : MonoBehaviour
     {
         if (other.CompareTag("Thruster"))
         {
+            if (!_isAttacking)
+            {
             if (Time.time >= _damageCooldownTimer)
             {
                 if (_isDead) return;
@@ -176,6 +173,7 @@ public class StretcherEnemy : MonoBehaviour
                 _rb.linearVelocityX = 0;
                _animator.Play("stretcher_death");
                soundControl.StretcherDeath();
+            }
             }
         }
     }
