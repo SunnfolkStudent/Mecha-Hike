@@ -4876,7 +4876,7 @@ Transform:
   m_GameObject: {fileID: 434459102}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.1, y: 0.07604, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -117601,7 +117601,7 @@ PrefabInstance:
       objectReference: {fileID: 1660522968}
     - target: {fileID: 8243469658908181265, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
       propertyPath: sightRange
-      value: 9
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8243469658908181265, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
       propertyPath: soundControl
@@ -117775,6 +117775,37 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7466280918430529567, guid: 12df26858b6fd5a4b9f9db83fe296974, type: 3}
   m_PrefabInstance: {fileID: 941930299}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &961974872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 961974873}
+  m_Layer: 0
+  m_Name: CameraShakeManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &961974873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 961974872}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &969759524
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -118442,6 +118473,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081169126}
   m_CullTransparentMesh: 1
+--- !u!1 &1094612197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1094612198}
+  m_Layer: 0
+  m_Name: -----------Camera Objects-----------
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1094612198
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1094612197}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1109684701
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -119197,7 +119259,7 @@ Transform:
   m_GameObject: {fileID: 1235300941}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 9.8573, y: 0.25505, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -120297,7 +120359,7 @@ Transform:
   m_GameObject: {fileID: 1562729688}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.03, y: 0.07604, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -120389,6 +120451,7 @@ GameObject:
   - component: {fileID: 1579952577}
   - component: {fileID: 1579952582}
   - component: {fileID: 1579952580}
+  - component: {fileID: 1579952583}
   m_Layer: 0
   m_Name: CinemachineCamera
   m_TagString: Untagged
@@ -120493,6 +120556,30 @@ MonoBehaviour:
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
   FollowOffset: {x: 0, y: 0, z: -10}
+--- !u!114 &1579952583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1579952576}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2d199b96b516448144ab30fb26aed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineImpulseListener
+  ApplyAfter: 2
+  ChannelMask: 1
+  Gain: 1
+  Use2DDistance: 0
+  UseCameraSpace: 1
+  SignalCombinationMode: 0
+  ReactionSettings:
+    m_SecondaryNoise: {fileID: 0}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    Duration: 1
+    m_NoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &1584932368
 GameObject:
   m_ObjectHideFlags: 0
@@ -120916,6 +121003,59 @@ MonoBehaviour:
   settings: {fileID: 626849512}
   eventSystem: {fileID: 582850068}
   selected: {fileID: 862540474}
+--- !u!114 &1660522999
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 507565276}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180ecf9b41d478f468eb3e9083753217, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.Cinemachine::Unity.Cinemachine.CinemachineImpulseSource
+  ImpulseDefinition:
+    ImpulseChannel: 1
+    ImpulseShape: 2
+    CustomImpulseShape:
+      serializedVersion: 2
+      m_Curve: []
+      m_PreInfinity: 2
+      m_PostInfinity: 2
+      m_RotationOrder: 4
+    ImpulseDuration: 0.2
+    ImpulseType: 0
+    DissipationRate: 0.25
+    RawSignal: {fileID: 0}
+    AmplitudeGain: 1
+    FrequencyGain: 1
+    RepeatMode: 0
+    Randomize: 1
+    TimeEnvelope:
+      AttackShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      DecayShape:
+        serializedVersion: 2
+        m_Curve: []
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      AttackTime: 0
+      SustainTime: 0.2
+      DecayTime: 0.7
+      ScaleWithImpact: 1
+      HoldForever: 0
+    ImpactRadius: 100
+    DirectionMode: 0
+    DissipationMode: 2
+    DissipationDistance: 100
+    PropagationSpeed: 343
+  DefaultVelocity: {x: 0, y: -1, z: 0}
 --- !u!1001 &1685744574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -163805,8 +163945,8 @@ Tilemap:
   - first: {x: -134, y: 231, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 64
-      m_TileSpriteIndex: 86
+      m_TileIndex: 75
+      m_TileSpriteIndex: 99
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -164115,8 +164255,8 @@ Tilemap:
   - first: {x: -140, y: 233, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 64
-      m_TileSpriteIndex: 86
+      m_TileIndex: 104
+      m_TileSpriteIndex: 104
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -164235,8 +164375,8 @@ Tilemap:
   - first: {x: -128, y: 233, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 64
-      m_TileSpriteIndex: 86
+      m_TileIndex: 104
+      m_TileSpriteIndex: 104
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -164265,8 +164405,8 @@ Tilemap:
   - first: {x: -140, y: 234, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 64
-      m_TileSpriteIndex: 86
+      m_TileIndex: 74
+      m_TileSpriteIndex: 88
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -164275,8 +164415,8 @@ Tilemap:
   - first: {x: -139, y: 234, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 64
-      m_TileSpriteIndex: 86
+      m_TileIndex: 74
+      m_TileSpriteIndex: 88
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -164375,8 +164515,8 @@ Tilemap:
   - first: {x: -129, y: 234, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 64
-      m_TileSpriteIndex: 86
+      m_TileIndex: 74
+      m_TileSpriteIndex: 88
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -164385,8 +164525,8 @@ Tilemap:
   - first: {x: -128, y: 234, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 64
-      m_TileSpriteIndex: 86
+      m_TileIndex: 74
+      m_TileSpriteIndex: 88
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -164997,7 +165137,7 @@ Tilemap:
     m_RefCount: 107
     m_Data: {fileID: 11400000, guid: 0f0367b44ee6648eaaf127ab372dcdeb, type: 2}
   - serializedVersion: 2
-    m_RefCount: 197
+    m_RefCount: 190
     m_Data: {fileID: 11400000, guid: afc3577a6d60943d2a139eb568d83901, type: 2}
   - serializedVersion: 2
     m_RefCount: 101
@@ -165027,10 +165167,10 @@ Tilemap:
     m_RefCount: 46
     m_Data: {fileID: 11400000, guid: f2fba1a5ee824489abd95c39635e4fc1, type: 2}
   - serializedVersion: 2
-    m_RefCount: 46
+    m_RefCount: 50
     m_Data: {fileID: 11400000, guid: bb9d38529bc3d4a9a94533864f999139, type: 2}
   - serializedVersion: 2
-    m_RefCount: 11
+    m_RefCount: 12
     m_Data: {fileID: 11400000, guid: b5a00e9ef58dc404a9cf65cc360ed0e5, type: 2}
   - serializedVersion: 2
     m_RefCount: 8
@@ -165117,7 +165257,7 @@ Tilemap:
     m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 35e7e724879394ddb8856bbd3a93f3d8, type: 2}
   - serializedVersion: 2
-    m_RefCount: 19
+    m_RefCount: 21
     m_Data: {fileID: 11400000, guid: 6472ee23133564f92a1e572304ae364b, type: 2}
   - serializedVersion: 2
     m_RefCount: 6
@@ -165382,13 +165522,13 @@ Tilemap:
     m_RefCount: 11
     m_Data: {fileID: -1717812232, guid: 3f0f4d4aa38754dff8d9bca8649950f6, type: 3}
   - serializedVersion: 2
-    m_RefCount: 197
+    m_RefCount: 190
     m_Data: {fileID: 288948989, guid: 3f0f4d4aa38754dff8d9bca8649950f6, type: 3}
   - serializedVersion: 2
     m_RefCount: 119
     m_Data: {fileID: -1690888815, guid: 3f0f4d4aa38754dff8d9bca8649950f6, type: 3}
   - serializedVersion: 2
-    m_RefCount: 46
+    m_RefCount: 50
     m_Data: {fileID: -1754406148, guid: 3f0f4d4aa38754dff8d9bca8649950f6, type: 3}
   - serializedVersion: 2
     m_RefCount: 54
@@ -165421,7 +165561,7 @@ Tilemap:
     m_RefCount: 3
     m_Data: {fileID: 538680508, guid: 3f0f4d4aa38754dff8d9bca8649950f6, type: 3}
   - serializedVersion: 2
-    m_RefCount: 11
+    m_RefCount: 12
     m_Data: {fileID: -2047791836, guid: 3f0f4d4aa38754dff8d9bca8649950f6, type: 3}
   - serializedVersion: 2
     m_RefCount: 1
@@ -165436,7 +165576,7 @@ Tilemap:
     m_RefCount: 1
     m_Data: {fileID: -314581047, guid: 3f0f4d4aa38754dff8d9bca8649950f6, type: 3}
   - serializedVersion: 2
-    m_RefCount: 19
+    m_RefCount: 21
     m_Data: {fileID: -835450152, guid: 3f0f4d4aa38754dff8d9bca8649950f6, type: 3}
   - serializedVersion: 2
     m_RefCount: 6
@@ -166483,6 +166623,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8799882428580803376, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1660522998}
+    - targetCorrespondingSourceObject: {fileID: 8799882428580803376, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1660522999}
   m_SourcePrefab: {fileID: 100100000, guid: 25276ad4abcd5e846a7c4612165c4e6b, type: 3}
 --- !u!1 &2022023427 stripped
 GameObject:
@@ -166811,9 +166954,11 @@ GameObject:
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
+  - {fileID: 1094612198}
   - {fileID: 519420032}
   - {fileID: 1579952578}
   - {fileID: 978480148}
+  - {fileID: 961974873}
   - {fileID: 1289662392}
   - {fileID: 434459105}
   - {fileID: 1562729691}

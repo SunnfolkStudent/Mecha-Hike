@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Unity.Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -57,6 +58,8 @@ public class PlayerController : MonoBehaviour
 
    private bool _isGamePaused;
 
+   private CinemachineImpulseSource impulseSource;
+
    private void Awake()
    {
       _enemyController = GetComponent<EnemyController>();
@@ -85,6 +88,7 @@ public class PlayerController : MonoBehaviour
       canMove = true;
       jetCoolDown = 0f;
       _audioSource.volume = 0.1f;
+      impulseSource = GetComponent<CinemachineImpulseSource>();
    }
 
    private void Update()
@@ -294,6 +298,7 @@ public class PlayerController : MonoBehaviour
          //Debug.Log("TakeDamage");
          
          if (_isDead) return;
+         CameraShakeManager.instance.CameraShake(impulseSource);
          _deathTime = Time.time + 0.5f;
          _animator.Play("hit");
          soundControl.PlayerHit();
@@ -307,6 +312,8 @@ public class PlayerController : MonoBehaviour
          PlayerPrefs.SetFloat("PlayerPositionX", 1.5f);
          PlayerPrefs.SetFloat("PlayerPositionY", -1.5f);
          _animator.Play("death2");
+         
+         CameraShakeManager.instance.CameraShake(impulseSource);
          //Debug.Log("oh nooo");
       }
 
