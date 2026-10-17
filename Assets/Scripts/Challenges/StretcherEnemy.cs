@@ -114,10 +114,14 @@ public class StretcherEnemy : MonoBehaviour
 
     private void IsAttacking()
     {
-        var hit = Physics2D.Raycast(raySpawn.position, Vector2.up, attackRadius, ~LayerMask.GetMask("Enemy"));
+        var hit = Physics2D.Raycast(raySpawn.position, Vector2.up, attackRadius, ~LayerMask.GetMask("Enemy", "Camera"));
+        //print(hit.transform.name);
+
+        if (hit == false) return;
+
         if (hit.collider.CompareTag("Player"))
         {
-            Debug.Log("Player Hit");
+            //Debug.Log("Player Hit");
             playerControllerScript.TakeDamage("MediumDamage");
         }
     }
@@ -136,6 +140,7 @@ public class StretcherEnemy : MonoBehaviour
     {
         _isAttacking = false;
         attackCooldown = 1.5f;
+        Debug.Log("AttackDelay");
     }
 
     private bool DetectedWall()
@@ -165,6 +170,7 @@ public class StretcherEnemy : MonoBehaviour
                 stretcherHealth -= 1f;
                 _damageCooldownTimer = Time.time + _damageCooldown;
                 _animator.Play("stretcher_hit");
+                soundControl.StretcherPunch();
             }
 
             if (stretcherHealth == 0f && !_isDead)
@@ -191,5 +197,6 @@ public class StretcherEnemy : MonoBehaviour
         Gizmos.DrawWireSphere(wallCheck.position, 0.1f);
         Gizmos.DrawWireSphere(fallCheck.position, 0.1f);
         Gizmos.DrawWireSphere(enemyCheck.position, 0.1f);
+        Gizmos.DrawRay(raySpawn.position, Vector2.up);
     }
 }

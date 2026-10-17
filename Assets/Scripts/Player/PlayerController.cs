@@ -135,7 +135,7 @@ public class PlayerController : MonoBehaviour
       }
       else
       {
-         _rb.gravityScale = 2;
+         _rb.gravityScale = 2.5f;
       }
       
       if (jetTimer > jetExhaust)

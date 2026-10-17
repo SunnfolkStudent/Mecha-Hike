@@ -143,34 +143,10 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: 5.5, y: 2}
-      - {x: 4.5, y: 2}
-      - {x: 4.5, y: 3}
-      - {x: 3.5, y: 3}
-      - {x: 3.5, y: 7}
-      - {x: 2.5, y: 7}
-      - {x: 2.5, y: 8}
-      - {x: -2.5, y: 8}
-      - {x: -2.5, y: 7}
-      - {x: -3.5, y: 7}
-      - {x: -3.5, y: 3}
-      - {x: -4.5, y: 3}
-      - {x: -4.5, y: 2}
-      - {x: -5.5, y: 2}
-      - {x: -5.5, y: -3}
-      - {x: -3.5, y: -3}
-      - {x: -3.5, y: -4}
-      - {x: -5.5, y: -4}
+      - {x: 5.5, y: 8}
+      - {x: -5.5, y: 8}
       - {x: -5.5, y: -8}
-      - {x: -1.5, y: -8}
-      - {x: -1.5, y: -5}
-      - {x: 1.5, y: -5}
-      - {x: 1.5, y: -8}
       - {x: 5.5, y: -8}
-      - {x: 5.5, y: -4}
-      - {x: 3.5, y: -4}
-      - {x: 3.5, y: -3}
-      - {x: 5.5, y: -3}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -193,34 +169,10 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: 5.5, y: 2}
-      - {x: 4.5, y: 2}
-      - {x: 4.5, y: 3}
-      - {x: 3.5, y: 3}
-      - {x: 3.5, y: 7}
-      - {x: 2.5, y: 7}
-      - {x: 2.5, y: 8}
-      - {x: -2.5, y: 8}
-      - {x: -2.5, y: 7}
-      - {x: -3.5, y: 7}
-      - {x: -3.5, y: 3}
-      - {x: -4.5, y: 3}
-      - {x: -4.5, y: 2}
-      - {x: -5.5, y: 2}
-      - {x: -5.5, y: -3}
-      - {x: -3.5, y: -3}
-      - {x: -3.5, y: -4}
-      - {x: -5.5, y: -4}
+      - {x: 5.5, y: 8}
+      - {x: -5.5, y: 8}
       - {x: -5.5, y: -8}
-      - {x: -1.5, y: -8}
-      - {x: -1.5, y: -5}
-      - {x: 1.5, y: -5}
-      - {x: 1.5, y: -8}
       - {x: 5.5, y: -8}
-      - {x: 5.5, y: -4}
-      - {x: 3.5, y: -4}
-      - {x: 3.5, y: -3}
-      - {x: 5.5, y: -3}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -243,34 +195,10 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: 5.5, y: 2}
-      - {x: 4.5, y: 2}
-      - {x: 4.5, y: 3}
-      - {x: 3.5, y: 3}
-      - {x: 3.5, y: 7}
-      - {x: 2.5, y: 7}
-      - {x: 2.5, y: 8}
-      - {x: -2.5, y: 8}
-      - {x: -2.5, y: 7}
-      - {x: -3.5, y: 7}
-      - {x: -3.5, y: 3}
-      - {x: -4.5, y: 3}
-      - {x: -4.5, y: 2}
-      - {x: -5.5, y: 2}
-      - {x: -5.5, y: -3}
-      - {x: -3.5, y: -3}
-      - {x: -3.5, y: -4}
-      - {x: -5.5, y: -4}
+      - {x: 5.5, y: 8}
+      - {x: -5.5, y: 8}
       - {x: -5.5, y: -8}
-      - {x: -1.5, y: -8}
-      - {x: -1.5, y: -5}
-      - {x: 1.5, y: -5}
-      - {x: 1.5, y: -8}
       - {x: 5.5, y: -8}
-      - {x: 5.5, y: -4}
-      - {x: 3.5, y: -4}
-      - {x: 3.5, y: -3}
-      - {x: 5.5, y: -3}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -293,34 +221,10 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: 5.5, y: 2}
-      - {x: 4.5, y: 2}
-      - {x: 4.5, y: 3}
-      - {x: 3.5, y: 3}
-      - {x: 3.5, y: 7}
-      - {x: 2.5, y: 7}
-      - {x: 2.5, y: 8}
-      - {x: -2.5, y: 8}
-      - {x: -2.5, y: 7}
-      - {x: -3.5, y: 7}
-      - {x: -3.5, y: 3}
-      - {x: -4.5, y: 3}
-      - {x: -4.5, y: 2}
-      - {x: -5.5, y: 2}
-      - {x: -5.5, y: -3}
-      - {x: -3.5, y: -3}
-      - {x: -3.5, y: -4}
-      - {x: -5.5, y: -4}
+      - {x: 5.5, y: 8}
+      - {x: -5.5, y: 8}
       - {x: -5.5, y: -8}
-      - {x: -1.5, y: -8}
-      - {x: -1.5, y: -5}
-      - {x: 1.5, y: -5}
-      - {x: 1.5, y: -8}
       - {x: 5.5, y: -8}
-      - {x: 5.5, y: -4}
-      - {x: 3.5, y: -4}
-      - {x: 3.5, y: -3}
-      - {x: 5.5, y: -3}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -343,30 +247,12 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: 5.5, y: 1.5}
-      - {x: 4.5, y: 1.5}
-      - {x: 4.5, y: 2.5}
-      - {x: 3.5, y: 2.5}
-      - {x: 3.5, y: 6.5}
-      - {x: 2.5, y: 6.5}
-      - {x: 2.5, y: 7.5}
-      - {x: -2.5, y: 7.5}
-      - {x: -2.5, y: 6.5}
-      - {x: -3.5, y: 6.5}
-      - {x: -3.5, y: 2.5}
-      - {x: -4.5, y: 2.5}
-      - {x: -4.5, y: 1.5}
-      - {x: -5.5, y: 1.5}
-      - {x: -5.5, y: -3.5}
-      - {x: -6.5, y: -3.5}
+      - {x: 6.5, y: 5.5}
+      - {x: 5.5, y: 7.5}
+      - {x: -5.5, y: 7.5}
+      - {x: -6.5, y: 5.5}
       - {x: -6.5, y: -7.5}
-      - {x: -2.5, y: -7.5}
-      - {x: -2.5, y: -5.5}
-      - {x: 2.5, y: -5.5}
-      - {x: 2.5, y: -7.5}
       - {x: 6.5, y: -7.5}
-      - {x: 6.5, y: -3.5}
-      - {x: 5.5, y: -3.5}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -389,32 +275,10 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: 5.5, y: 2}
-      - {x: 4.5, y: 2}
-      - {x: 4.5, y: 3}
-      - {x: 3.5, y: 3}
-      - {x: 3.5, y: 7}
-      - {x: 2.5, y: 7}
-      - {x: 2.5, y: 8}
-      - {x: -2.5, y: 8}
-      - {x: -2.5, y: 7}
-      - {x: -3.5, y: 7}
-      - {x: -3.5, y: 3}
-      - {x: -4.5, y: 3}
-      - {x: -4.5, y: 2}
-      - {x: -5.5, y: 2}
-      - {x: -5.5, y: -3}
-      - {x: -4.5, y: -3}
-      - {x: -4.5, y: -7}
-      - {x: -0.5, y: -7}
-      - {x: -0.5, y: -5}
-      - {x: 0.5, y: -5}
-      - {x: 0.5, y: -8}
-      - {x: 4.5, y: -8}
-      - {x: 4.5, y: -4}
-      - {x: 3.5, y: -4}
-      - {x: 3.5, y: -3}
-      - {x: 5.5, y: -3}
+      - {x: 5.5, y: 8}
+      - {x: -5.5, y: 8}
+      - {x: -5.5, y: -8}
+      - {x: 5.5, y: -8}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -437,28 +301,10 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: 5.5, y: 1.5}
-      - {x: 4.5, y: 1.5}
-      - {x: 4.5, y: 2.5}
-      - {x: 3.5, y: 2.5}
-      - {x: 3.5, y: 6.5}
-      - {x: 2.5, y: 6.5}
-      - {x: 2.5, y: 7.5}
-      - {x: -2.5, y: 7.5}
-      - {x: -2.5, y: 6.5}
-      - {x: -3.5, y: 6.5}
-      - {x: -3.5, y: 2.5}
-      - {x: -4.5, y: 2.5}
-      - {x: -4.5, y: 1.5}
-      - {x: -5.5, y: 1.5}
-      - {x: -5.5, y: -3.5}
-      - {x: -3.5, y: -3.5}
-      - {x: -3.5, y: -7.5}
-      - {x: 2.5, y: -7.5}
-      - {x: 2.5, y: -5.5}
-      - {x: 3.5, y: -5.5}
-      - {x: 3.5, y: -3.5}
-      - {x: 5.5, y: -3.5}
+      - {x: 5.5, y: 7.5}
+      - {x: -5.5, y: 7.5}
+      - {x: -5.5, y: -7.5}
+      - {x: 5.5, y: -7.5}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -481,32 +327,10 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: 5.5, y: 2}
-      - {x: 4.5, y: 2}
-      - {x: 4.5, y: 3}
-      - {x: 3.5, y: 3}
-      - {x: 3.5, y: 7}
-      - {x: 2.5, y: 7}
-      - {x: 2.5, y: 8}
-      - {x: -2.5, y: 8}
-      - {x: -2.5, y: 7}
-      - {x: -3.5, y: 7}
-      - {x: -3.5, y: 3}
-      - {x: -4.5, y: 3}
-      - {x: -4.5, y: 2}
-      - {x: -5.5, y: 2}
-      - {x: -5.5, y: -3}
-      - {x: -3.5, y: -3}
-      - {x: -3.5, y: -4}
-      - {x: -5.5, y: -4}
+      - {x: 5.5, y: 8}
+      - {x: -5.5, y: 8}
       - {x: -5.5, y: -8}
-      - {x: -1.5, y: -8}
-      - {x: -1.5, y: -5}
-      - {x: 0.5, y: -5}
-      - {x: 0.5, y: -7}
-      - {x: 4.5, y: -7}
-      - {x: 4.5, y: -3}
-      - {x: 5.5, y: -3}
+      - {x: 5.5, y: -8}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -529,21 +353,8 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: 4.5, y: 0.5}
-      - {x: 4.5, y: 1}
-      - {x: 3.5, y: 1}
-      - {x: 3.5, y: 2}
-      - {x: 2.5, y: 2}
-      - {x: 2.5, y: 7}
-      - {x: 1.5, y: 7}
-      - {x: 1.5, y: 8}
-      - {x: -1.5, y: 8}
-      - {x: -1.5, y: 7}
-      - {x: -2.5, y: 7}
-      - {x: -2.5, y: 2}
-      - {x: -3.5, y: 2}
-      - {x: -3.5, y: 1}
-      - {x: -4.5, y: 1}
+      - {x: 4.5, y: 8}
+      - {x: -4.5, y: 8}
       - {x: -4.5, y: -8}
       - {x: 4.5, y: -8}
     vertices: []
@@ -568,22 +379,8 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: 5.5, y: 1}
-      - {x: 4.5, y: 1}
-      - {x: 4.5, y: 2}
-      - {x: 3.5, y: 2}
-      - {x: 3.5, y: 6}
-      - {x: 2.5, y: 6}
-      - {x: 2.5, y: 7}
-      - {x: 2.5, y: 7}
-      - {x: -2.5, y: 7}
-      - {x: -2.5, y: 7}
-      - {x: -2.5, y: 6}
-      - {x: -3.5, y: 6}
-      - {x: -3.5, y: 2}
-      - {x: -4.5, y: 2}
-      - {x: -4.5, y: 1}
-      - {x: -5.5, y: 1}
+      - {x: 5.5, y: 7}
+      - {x: -5.5, y: 7}
       - {x: -5.5, y: -7}
       - {x: 5.5, y: -7}
     vertices: []
@@ -608,22 +405,8 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: 5.5, y: 0.5}
-      - {x: 4.5, y: 0.5}
-      - {x: 4.5, y: 1.5}
-      - {x: 3.5, y: 1.5}
-      - {x: 3.5, y: 5.5}
-      - {x: 2.5, y: 5.5}
-      - {x: 2.5, y: 6.5}
-      - {x: 2.5, y: 6.5}
-      - {x: -2.5, y: 6.5}
-      - {x: -2.5, y: 6.5}
-      - {x: -2.5, y: 5.5}
-      - {x: -3.5, y: 5.5}
-      - {x: -3.5, y: 1.5}
-      - {x: -4.5, y: 1.5}
-      - {x: -4.5, y: 0.5}
-      - {x: -5.5, y: 0.5}
+      - {x: 5.5, y: 6.5}
+      - {x: -5.5, y: 6.5}
       - {x: -5.5, y: -6.5}
       - {x: 5.5, y: -6.5}
     vertices: []
@@ -646,7 +429,12 @@ ScriptedImporter:
       height: 16
     spriteID: a9386c2f0f84e0041a2cc32bf8c0a949
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: 5.5, y: 8}
+      - {x: -5.5, y: 8}
+      - {x: -5.5, y: -8}
+      - {x: 5.5, y: -8}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -669,32 +457,14 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: -1, y: -5}
-      - {x: 2, y: -5}
-      - {x: 2, y: -8}
+      - {x: 6, y: 4}
+      - {x: 3, y: 4}
+      - {x: 3, y: 5}
+      - {x: 2, y: 6}
+      - {x: 2, y: 8}
+      - {x: -6, y: 8}
+      - {x: -6, y: -8}
       - {x: 6, y: -8}
-      - {x: 6, y: -4}
-      - {x: 4, y: -4}
-      - {x: 4, y: -3}
-      - {x: 6, y: -3}
-      - {x: 6, y: 2}
-      - {x: 5, y: 2}
-      - {x: 5, y: 3}
-      - {x: 1, y: 3}
-      - {x: 1, y: 7}
-      - {x: 0, y: 7}
-      - {x: 0, y: 8}
-      - {x: -5, y: 8}
-      - {x: -5, y: 7}
-      - {x: -6, y: 7}
-      - {x: -6, y: 3}
-      - {x: -5, y: 3}
-      - {x: -5, y: -3}
-      - {x: -3, y: -3}
-      - {x: -3, y: -4}
-      - {x: -5, y: -4}
-      - {x: -5, y: -8}
-      - {x: -1, y: -8}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -717,34 +487,13 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: 5, y: 1.5}
-      - {x: 4, y: 1.5}
-      - {x: 4, y: 2.5}
-      - {x: 1, y: 2.5}
-      - {x: 1, y: 6.5}
-      - {x: 0, y: 6.5}
-      - {x: 0, y: 7.5}
-      - {x: -5, y: 7.5}
-      - {x: -5, y: 6.5}
-      - {x: -6, y: 6.5}
-      - {x: -6, y: 2.5}
-      - {x: -5, y: 2.5}
-      - {x: -5, y: 1.5}
-      - {x: -6, y: 1.5}
-      - {x: -6, y: -3.5}
-      - {x: -4, y: -3.5}
-      - {x: -4, y: -4.5}
-      - {x: -6, y: -4.5}
+      - {x: 6, y: 2.5}
+      - {x: 4, y: 3.5}
+      - {x: 2, y: 3.5}
+      - {x: 2, y: 8.5}
+      - {x: -6, y: 8.5}
       - {x: -6, y: -8.5}
-      - {x: -2, y: -8.5}
-      - {x: -2, y: -5.5}
-      - {x: 1, y: -5.5}
-      - {x: 1, y: -8.5}
-      - {x: 5, y: -8.5}
-      - {x: 5, y: -4.5}
-      - {x: 3, y: -4.5}
-      - {x: 3, y: -3.5}
-      - {x: 5, y: -3.5}
+      - {x: 6, y: -8.5}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -767,32 +516,11 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: 6, y: 1.5}
-      - {x: 5, y: 1.5}
-      - {x: 5, y: 2.5}
-      - {x: 4, y: 2.5}
-      - {x: 4, y: 6.5}
-      - {x: 3, y: 6.5}
-      - {x: 3, y: 7.5}
-      - {x: -2, y: 7.5}
-      - {x: -2, y: 6.5}
-      - {x: -3, y: 6.5}
-      - {x: -3, y: 2.5}
-      - {x: -4, y: 2.5}
-      - {x: -4, y: 1.5}
-      - {x: -5, y: 1.5}
-      - {x: -5, y: -3.5}
-      - {x: -6, y: -3.5}
+      - {x: 6, y: 7.5}
+      - {x: -5, y: 7.5}
+      - {x: -6, y: 5.5}
       - {x: -6, y: -7.5}
-      - {x: -2, y: -7.5}
-      - {x: -2, y: -5.5}
-      - {x: 2, y: -5.5}
-      - {x: 2, y: -6.5}
-      - {x: 1, y: -6.5}
-      - {x: 1, y: -7.5}
-      - {x: 5, y: -7.5}
-      - {x: 5, y: -6.5}
-      - {x: 6, y: -6.5}
+      - {x: 6, y: -7.5}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -815,34 +543,11 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: -2.5, y: -3}
-      - {x: -1.5, y: -3}
-      - {x: -1.5, y: -5}
-      - {x: 0.5, y: -5}
-      - {x: 0.5, y: -6}
-      - {x: 4.5, y: -6}
-      - {x: 4.5, y: -5}
-      - {x: 5.5, y: -5}
-      - {x: 5.5, y: -3}
-      - {x: 6.5, y: -3}
-      - {x: 6.5, y: 2}
-      - {x: 5.5, y: 2}
-      - {x: 5.5, y: 3}
-      - {x: 4.5, y: 3}
-      - {x: 4.5, y: 5}
-      - {x: 3.5, y: 5}
-      - {x: 3.5, y: 6}
-      - {x: -1.5, y: 6}
-      - {x: -1.5, y: 5}
-      - {x: -2.5, y: 5}
-      - {x: -2.5, y: 3}
-      - {x: -3.5, y: 3}
-      - {x: -3.5, y: 2}
-      - {x: -4.5, y: 2}
-      - {x: -4.5, y: -2}
-      - {x: -6.5, y: -2}
+      - {x: 6.5, y: 6}
+      - {x: -4.5, y: 6}
+      - {x: -6.5, y: 1}
       - {x: -6.5, y: -6}
-      - {x: -2.5, y: -6}
+      - {x: 6.5, y: -6}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -865,34 +570,11 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: -2.5, y: -3}
-      - {x: -1.5, y: -3}
-      - {x: -1.5, y: -5}
-      - {x: 0.5, y: -5}
-      - {x: 0.5, y: -6}
-      - {x: 4.5, y: -6}
-      - {x: 4.5, y: -5}
-      - {x: 5.5, y: -5}
-      - {x: 5.5, y: -3}
-      - {x: 6.5, y: -3}
-      - {x: 6.5, y: 2}
-      - {x: 5.5, y: 2}
-      - {x: 5.5, y: 3}
-      - {x: 4.5, y: 3}
-      - {x: 4.5, y: 5}
-      - {x: 3.5, y: 5}
-      - {x: 3.5, y: 6}
-      - {x: -1.5, y: 6}
-      - {x: -1.5, y: 5}
-      - {x: -2.5, y: 5}
-      - {x: -2.5, y: 3}
-      - {x: -3.5, y: 3}
-      - {x: -3.5, y: 2}
-      - {x: -4.5, y: 2}
-      - {x: -4.5, y: -2}
-      - {x: -6.5, y: -2}
+      - {x: 6.5, y: 6}
+      - {x: -4.5, y: 6}
+      - {x: -6.5, y: 1}
       - {x: -6.5, y: -6}
-      - {x: -2.5, y: -6}
+      - {x: 6.5, y: -6}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -913,7 +595,13 @@ ScriptedImporter:
       height: 12
     spriteID: 044fe8252369b3549bbd5585c99c4a56
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: 6.5, y: 6}
+      - {x: -4.5, y: 6}
+      - {x: -6.5, y: 1}
+      - {x: -6.5, y: -6}
+      - {x: 6.5, y: -6}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -934,7 +622,13 @@ ScriptedImporter:
       height: 12
     spriteID: 37afce9467f8d5842856537e3c34db3a
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: 6.5, y: 6}
+      - {x: -4.5, y: 6}
+      - {x: -6.5, y: 1}
+      - {x: -6.5, y: -6}
+      - {x: 6.5, y: -6}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -955,7 +649,12 @@ ScriptedImporter:
       height: 12
     spriteID: fb429e975dbf8a24fab34937afacd5fa
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: 5.5, y: 6}
+      - {x: -5.5, y: 6}
+      - {x: -5.5, y: -6}
+      - {x: 5.5, y: -6}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -976,7 +675,12 @@ ScriptedImporter:
       height: 16
     spriteID: df8dc035be2949a498c364e9724b59cc
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: 8, y: 8}
+      - {x: -8, y: 8}
+      - {x: -8, y: -8}
+      - {x: 8, y: -8}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -997,7 +701,12 @@ ScriptedImporter:
       height: 16
     spriteID: 2c24403d6bb883045b83ecc5e28af3da
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: 7.5, y: -8}
+      - {x: 7.5, y: 8}
+      - {x: -7.5, y: 8}
+      - {x: -7.5, y: -8}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -1018,7 +727,12 @@ ScriptedImporter:
       height: 16
     spriteID: 05e0bf231d80eb94c93560e612067abb
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: 8, y: 8}
+      - {x: -8, y: 8}
+      - {x: -8, y: -8}
+      - {x: 8, y: -8}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -1039,7 +753,12 @@ ScriptedImporter:
       height: 16
     spriteID: c85949c89e281814b967497e5c6bf8e6
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: 8, y: -8}
+      - {x: 8, y: 8}
+      - {x: -8, y: 8}
+      - {x: -8, y: -8}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -1060,7 +779,12 @@ ScriptedImporter:
       height: 16
     spriteID: d72c8cfe28e98024bb7243d48016722f
     spriteBone: []
-    spriteOutline: []
+    spriteOutline:
+    - outline:
+      - {x: -8, y: 8}
+      - {x: -8, y: -8}
+      - {x: 8, y: -8}
+      - {x: 8, y: 8}
     vertices: []
     spritePhysicsOutline: []
     indices: 
@@ -1104,22 +828,8 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: 5.5, y: 0.5}
-      - {x: 4.5, y: 0.5}
-      - {x: 4.5, y: 1.5}
-      - {x: 3.5, y: 1.5}
-      - {x: 3.5, y: 5.5}
-      - {x: 2.5, y: 5.5}
-      - {x: 2.5, y: 6.5}
-      - {x: 2.5, y: 6.5}
-      - {x: -2.5, y: 6.5}
-      - {x: -2.5, y: 6.5}
-      - {x: -2.5, y: 5.5}
-      - {x: -3.5, y: 5.5}
-      - {x: -3.5, y: 1.5}
-      - {x: -4.5, y: 1.5}
-      - {x: -4.5, y: 0.5}
-      - {x: -5.5, y: 0.5}
+      - {x: 5.5, y: 6.5}
+      - {x: -5.5, y: 6.5}
       - {x: -5.5, y: -6.5}
       - {x: 5.5, y: -6.5}
     vertices: []
@@ -1144,22 +854,8 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: 5.5, y: 0.5}
-      - {x: 4.5, y: 0.5}
-      - {x: 4.5, y: 1.5}
-      - {x: 3.5, y: 1.5}
-      - {x: 3.5, y: 5.5}
-      - {x: 2.5, y: 5.5}
-      - {x: 2.5, y: 6.5}
-      - {x: 2.5, y: 6.5}
-      - {x: -2.5, y: 6.5}
-      - {x: -2.5, y: 6.5}
-      - {x: -2.5, y: 5.5}
-      - {x: -3.5, y: 5.5}
-      - {x: -3.5, y: 1.5}
-      - {x: -4.5, y: 1.5}
-      - {x: -4.5, y: 0.5}
-      - {x: -5.5, y: 0.5}
+      - {x: 5.5, y: 6.5}
+      - {x: -5.5, y: 6.5}
       - {x: -5.5, y: -6.5}
       - {x: 5.5, y: -6.5}
     vertices: []
@@ -1184,22 +880,8 @@ ScriptedImporter:
     spriteBone: []
     spriteOutline:
     - outline:
-      - {x: 5.5, y: 0.5}
-      - {x: 4.5, y: 0.5}
-      - {x: 4.5, y: 1.5}
-      - {x: 3.5, y: 1.5}
-      - {x: 3.5, y: 5.5}
-      - {x: 2.5, y: 5.5}
-      - {x: 2.5, y: 6.5}
-      - {x: 2.5, y: 6.5}
-      - {x: -2.5, y: 6.5}
-      - {x: -2.5, y: 6.5}
-      - {x: -2.5, y: 5.5}
-      - {x: -3.5, y: 5.5}
-      - {x: -3.5, y: 1.5}
-      - {x: -4.5, y: 1.5}
-      - {x: -4.5, y: 0.5}
-      - {x: -5.5, y: 0.5}
+      - {x: 5.5, y: 6.5}
+      - {x: -5.5, y: 6.5}
       - {x: -5.5, y: -6.5}
       - {x: 5.5, y: -6.5}
     vertices: []
