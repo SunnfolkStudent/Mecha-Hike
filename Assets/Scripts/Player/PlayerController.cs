@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 
    [Header("Ground Check")]
    public bool isGrounded;
+   public bool wasGrounded;
    public Transform groundCheck;
    public LayerMask whatIsGround;
    public Vector2 groundBoxSize = new Vector2(0.8f, 0.2f);
@@ -102,19 +103,34 @@ public class PlayerController : MonoBehaviour
       jetCoolDown -= Time.deltaTime;
       
       isGrounded = Physics2D.OverlapBox(groundCheck.position, groundBoxSize, 0f, whatIsGround);
-      
-      if (_input.jumpHeld && jumpTimer <= 0 && jetCoolDown <= 0 && !_isDead)
+      if (isGrounded)
+      {
+         wasGrounded = true;
+      }
+      if (Mathf.Sign(_rb.linearVelocity.y) > 1)
+      {
+         wasGrounded = false;
+      }
+   
+      if (wasGrounded && Mathf.Sign(_rb.linearVelocityY) < -1)
+      {
+         jetCoolDown = 0;
+         jetTimer = 0;
+      }
+
+      if (_input.jumpHeld && jumpTimer <= 0 && jetCoolDown <= 0 && !_isDead && !isGrounded)
       { 
          thrusters.gameObject.SetActive(true);
          _rb.gravityScale = 0;
          _rb.linearVelocityY = jetForce;
          jetTimer += Time.deltaTime;
+         wasGrounded = false;
       }
       else
       {
          thrusters.gameObject.SetActive(false);
       }
-
+      
       if (_input.jumpReleased && jetTimer> 0.1f)
       {
          jetTimer += 0.3f;
@@ -126,11 +142,9 @@ public class PlayerController : MonoBehaviour
          {
          jetCoolDown = 0;
          jetTimer = 0;
-         }
-         if (_input.jumpPressed)
-         {
-            _rb.linearVelocityY = jumpSpeed;
-            jumpTimer = 0.3f;
+         _rb.linearVelocityY = jumpSpeed;
+         jumpTimer = 0.3f;
+         wasGrounded = false;
          }
       }
       else
